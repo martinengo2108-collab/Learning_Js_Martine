@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Red+Hat+Display,sans-serif ;
     font-size: 16px;
     background: url('../Day4project/images/pattern-background-desktop.svg'),hsl(225,100%,95%);
     background-repeat: no-repeat;
@@ -39,7 +38,8 @@ body{
 }
 .content h2{
     font-weight: 900;
-    color: hsl(223,47%,23%);
+    color: hsl(223,47%,15%);
+    font-family: RedHatDisplay,sans-serif ;
 }
 .content p{
      color: hsl(224,23%,55%);
