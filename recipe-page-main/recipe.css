@@ -108,3 +108,9 @@
 .attribution a {
      color: hsl(228, 45%, 44%);
 }
+@media(max-width:450px){
+  
+ body{
+   background-color: hsl(330, 100%, 98%);
+ }
+}
