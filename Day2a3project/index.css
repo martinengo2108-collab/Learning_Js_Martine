@@ -84,7 +84,7 @@ body{
 
     .main{
     width: 100%;
-    background-color: aqua;
+    background-color: hsl(0, 0%, 13%) ;
 }
 }
 @media(min-width:601px) and (max-width:768px){

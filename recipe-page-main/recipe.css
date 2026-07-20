@@ -1,23 +1,110 @@
  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box ;
+   border: 0;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box ;
  }
  body{
-    font-family: Outfit,sans-serif ;
-    font-size: 16px;
-    min-height: 100vh;
-    width: 200px;
-    display: grid;
-    place-items: center;
+   display: flex;
+   place-content: center;
+   background-color: hsl(330, 100%, 98%);
  }
- 
- 
- 
+ .container{
+   max-width: 700px;
+   background-color:  hsl(0, 0%, 100%);
+   padding: 2rem;
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+   border-radius: 2rem;
+   font-family: "Outfit",sans-serif;
+   font-size: 1.15rem;
+   color: hsl(30, 10%, 34%);
+ }
+ .recipe-img img{
+   width: 100%;
+   height: 100%;
+   border-radius: 1.5rem;
+   margin-bottom: 1.5rem;
+ }
+ h1,h2{
+   font-family: 'Young Serif', serif;
+   margin-bottom: 1rem;
+   font-size: 1.5rem;
+ }
+ h1{
+   color: hsl(24, 5%, 18%);
+   font-weight: 700;
+   font-size: 2rem;
+ }
+ h2{
+  color: hsl(14, 45%, 36%);
+ }
+ ul,li,p{
+   margin-bottom: 0.5rem;
+ }
+ ul,p{
+   margin-bottom: 1.5rem;
+ }
+ .prep-time{
+   background-color: hsla(330, 52%, 68%, 0.082);
+   padding: 1rem;
+   border-radius: 0.5rem;
+   margin-bottom: 1.5rem;
+   padding-left: 1.5rem;
+ }
+ .prep-time h4{
+   color: hsl(332, 51%, 32%);
+   margin-bottom: 1rem;
+   padding-left: 0.5rem;
+ }
+ .prep-time ul , .ingredients , .item{
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+ }
+ .ingredients li{
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+ }
+ .ingredients li::marker{
+  color:  hsl(14, 45%, 36%);
+ }
+ .item li::marker{
+  color: hsl(14, 45%, 36%);
+  font-weight: 650;
+ }
+ .item li span{
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.664);
+ }
+ .item li p{
+  padding-left: 1.5rem;
+ }
+ .prep-time li span{
+  font-weight: 750;
+ }
+ .prep-time li::marker{
+  color: hsl(332, 51%, 32%);
+ }
+ .prep-time li{
+  padding-left: 1rem;
+ }
+ hr{
+  border-top: 1px solid rgba(0, 0, 0, 0.363) ;
+  margin-bottom: 1rem;
+ }
+ .nutri-list li{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+ }
+ .nutri-list strong{
+  color: hsl(14, 45%, 36%) ;
+ }
  .attribution { 
     font-size: 0.6875rem;
      text-align: center;
  }
 .attribution a {
      color: hsl(228, 45%, 44%);
-     }
+}
