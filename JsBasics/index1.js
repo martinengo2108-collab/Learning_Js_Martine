@@ -11,3 +11,9 @@ function happyBirthday(username, age){
 }
 
 happyBirthday("Martine", 7);
+function sayHello() {
+  return "Hello World";
+}
+
+let message = sayHello();
+console.log(message)
