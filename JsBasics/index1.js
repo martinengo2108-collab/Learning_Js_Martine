@@ -56,7 +56,7 @@ x = findMax(1, 123, 500, 115, 44, 88);
 console.log(x)
 /*Learning arrays and arrays methods*/
 
-let fruits = ['mango','banana','pear','water melon','orange'];
+let fruits = ['mango','banana','pear','water melon','orange','pawpaw'];
 fruits.push('coconut');
 //fruits.pop();
 fruits.unshift('sugar cane');
@@ -81,4 +81,6 @@ for(let fruit of fruits){
 
 console.log(Array.from("foo"));
 
-console.log(fruits.slice(3))
+//console.log(fruits.slice(2,4));
+console.log(fruits.splice(2,5))
+console.log(fruits)
