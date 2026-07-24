@@ -77,3 +77,8 @@ for(let fruit of fruits){
 
   console.log(fruit);
 }
+
+
+console.log(Array.from("foo"));
+
+console.log(fruits.slice(3))
