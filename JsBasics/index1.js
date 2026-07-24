@@ -17,3 +17,9 @@ function sayHello() {
 
 let message = sayHello();
 console.log(message)
+
+function substract(x, y){
+  answer= x-y;
+  return answer
+}
+console.log(substract(4 ,7));
