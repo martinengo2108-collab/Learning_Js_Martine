@@ -38,3 +38,31 @@ function isEven(num){
   return num %2 == 0? true: false;
 }
 console.log(isEven(23));
+function area(l, w){
+  return l*w;
+}
+console.log(area(10,5));
+
+function findMax() {
+  let max = -Infinity;
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+}
+x = findMax(1, 123, 500, 115, 44, 88);
+console.log(x)
+/*Learning arrays and arrays methods*/
+
+let fruits = ['mango','banana','pear','water melon','orange'];
+fruits.push('coconut');
+//fruits.pop();
+fruits.unshift('sugar cane');
+fruits.shift();
+
+
+console.log(fruits[0]);
+console.log(fruits[2]);
+console.log(fruits[5]);
