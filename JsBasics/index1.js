@@ -66,3 +66,14 @@ fruits.shift();
 console.log(fruits[0]);
 console.log(fruits[2]);
 console.log(fruits[5]);
+console.log(fruits.length);
+
+console.log(fruits.indexOf('pear'));
+for(let i=fruits.length-1; i>=0; i--){
+
+  console.log(fruits[i]);
+}
+for(let fruit of fruits){
+
+  console.log(fruit);
+}
