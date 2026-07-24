@@ -20,6 +20,21 @@ console.log(message)
 
 function substract(x, y){
   answer= x-y;
-  return answer
+  return answer;
 }
 console.log(substract(4 ,7));
+function isEven(num){
+
+  if(num % 2== 0){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+
+console.log(isEven(13));
+function isEven(num){
+  return num %2 == 0? true: false;
+}
+console.log(isEven(23));
