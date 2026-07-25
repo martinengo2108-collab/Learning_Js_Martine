@@ -140,9 +140,14 @@ const person1 = {
 }
 
 const person2 = {
-  FirstName: 'Moon',
-  LastName:'Kennedy',
+  FirstName: 'Melissa',
+  LastName:'Gwen',
   IsStudent:'true',
-  Greetings:function(){console.log('Nice to meet you')}
+  Greetings:() => {console.log('I am happy to meet you ')},
 }
 
+console.log()
+
+person1.Greetings();
+
+person2.Greetings();
