@@ -131,3 +131,18 @@ function displayCart() {
     console.log("Total: $" + total);
 }
 displayCart();
+
+const person1 = {
+  FirstName: 'Martine',
+  LastName:'Boumkwo',
+  IsStudent:'true',
+  Greetings:function(){console.log('Nice to meet you')}
+}
+
+const person2 = {
+  FirstName: 'Moon',
+  LastName:'Kennedy',
+  IsStudent:'true',
+  Greetings:function(){console.log('Nice to meet you')}
+}
+
