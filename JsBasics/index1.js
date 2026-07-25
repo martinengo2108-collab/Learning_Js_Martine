@@ -90,7 +90,7 @@ let Prices=[];
 
 function addItems(item,prices){
   Cart.push(item);
-  Cart.push(prices);
+  Prices.push(prices);
 
   console.log(`${item} was added to the list`);
 }
@@ -118,3 +118,16 @@ console.log(Cart);
 
 RemoveItem('banana',200);
 console.log(Cart);
+console.log(Prices);
+
+function displayCart() {
+    let total = 0;
+
+    for (let i = 0; i < Cart.length; i++) {
+        console.log(`${Cart[i]} - $${Prices[i]}`);
+        total += Prices[i];
+    }
+
+    console.log("Total: $" + total);
+}
+displayCart();
