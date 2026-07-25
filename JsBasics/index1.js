@@ -90,16 +90,24 @@ let Cart= [];
 function addItems(item){
   Cart.push(item);
 
-  console.log(`$(item) was added to the list`);
+  console.log(`${item} was added to the list`);
 }
-console.log(Cart);
 function RemoveItem(item){
   index = indexOf(item);
   if(index !== -1){
     Cart.splice(index,1);
   }
   else{
-      console.log(`$(item) is not in the cart`);
+      console.log(`${item} is not in the cart`);
   }
 }
+
+addItems('mango');
+addItems('banana');
+addItems('pear');
+
+addItems('water melon');
+console.log(Cart);
+
+RemoveItem('pear');
 console.log(Cart);
