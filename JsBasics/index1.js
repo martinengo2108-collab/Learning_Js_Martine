@@ -82,5 +82,11 @@ for(let fruit of fruits){
 console.log(Array.from("foo"));
 
 //console.log(fruits.slice(2,4));
-console.log(fruits.splice(2,5))
-console.log(fruits)
+console.log(fruits.splice(2,5));
+console.log(fruits);
+
+let cart= [];
+
+function addItems(){
+  
+}
