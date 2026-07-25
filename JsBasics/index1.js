@@ -86,28 +86,35 @@ console.log(fruits.splice(2,5));
 console.log(fruits);
 
 let Cart= [];
+let Prices=[];
 
-function addItems(item){
+function addItems(item,prices){
   Cart.push(item);
+  Cart.push(prices);
 
   console.log(`${item} was added to the list`);
 }
-function RemoveItem(item){
-  index = indexOf(item);
-  if(index !== -1){
-    Cart.splice(index,1);
+function RemoveItem(item,prices){
+  let index1 = Cart.indexOf(item);
+
+  let index2 = Prices.indexOf(prices);
+  if(index1 !== -1 && index2 !== -1 ){
+    Cart.splice(index1,1);
+    
+    Prices.splice(index2,1);
   }
   else{
       console.log(`${item} is not in the cart`);
   }
 }
 
-addItems('mango');
-addItems('banana');
-addItems('pear');
+addItems('mango',100);
+addItems('banana',200);
+addItems('pear',50);
 
-addItems('water melon');
+addItems('water melon',500);
+
 console.log(Cart);
 
-RemoveItem('pear');
+RemoveItem('banana',200);
 console.log(Cart);
