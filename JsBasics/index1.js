@@ -136,15 +136,19 @@ const person1 = {
   FirstName: 'Martine',
   LastName:'Boumkwo',
   IsStudent:'true',
-  Greetings:function(){console.log('Nice to meet you')}
-}
+  Greetings:function(){console.log('Nice to meet you')},
+  fullName: function() {return this.firstName + " " + this.lastName;}
+};
 
 const person2 = {
   FirstName: 'Melissa',
   LastName:'Gwen',
   IsStudent:'true',
   Greetings:() => {console.log('I am happy to meet you ')},
-}
+  fullName: function() {
+    return this.FirstName + " " + this.LastName;
+  },
+};
 
 console.log(person1.FirstName);
 
@@ -152,3 +156,5 @@ console.log(person1.FirstName);
 person1.Greetings();
 
 person2.Greetings();
+
+console.log(person1.fullName());
