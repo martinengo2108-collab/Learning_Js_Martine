@@ -146,7 +146,8 @@ const person2 = {
   Greetings:() => {console.log('I am happy to meet you ')},
 }
 
-console.log()
+console.log(person1.FirstName);
+
 
 person1.Greetings();
 
