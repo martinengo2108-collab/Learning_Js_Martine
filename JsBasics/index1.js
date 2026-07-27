@@ -137,7 +137,7 @@ const person1 = {
   LastName:'Boumkwo',
   IsStudent:'true',
   Greetings:function(){console.log('Nice to meet you')},
-  fullName: function() {return this.firstName + " " + this.lastName;}
+  fullName: function() {return this.FirstName + " " + this.LastName;}
 };
 
 const person2 = {
@@ -157,4 +157,13 @@ person1.Greetings();
 
 person2.Greetings();
 
-console.log(person1.fullName());
+console.log(person2.fullName());
+
+let person = {
+    name: "Alice",
+    phones: ["670123456"]
+};
+
+person.phones.push("677987654");
+
+console.log(person);
