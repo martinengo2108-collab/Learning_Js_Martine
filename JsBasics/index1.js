@@ -167,6 +167,8 @@ let contact = {
 
 console.log(contact.phoneNumbers);
 
+console.log(contact.emails[0]);
+
 let person = {
     name: ["Alice"],
     phones: ["670123456"]
@@ -175,4 +177,21 @@ let person = {
 person.name.push("Naomie")
 person.phones.push("677987654");
 
-console.log(person);
+console.log(person.phones[1]);
+
+let addressBook= [];
+
+let addressBook = [
+    {
+        name: "Alice Johnson",
+        phone: "670123456",
+        email: "alice@gmail.com"
+    },
+    {
+        name: "Bob Smith",
+        phone: "677987654",
+        email: "bob@gmail.com"
+    }
+];
+
+
