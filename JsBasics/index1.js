@@ -174,10 +174,10 @@ let person = {
     phones: ["670123456"]
 };
 
-person.name.push("Naomie")
+person.name.push("Naomie");
 person.phones.push("677987654");
 
-console.log(person.phones[1]);
+console.log(person.phones[0]);
 
 
 let addressBook = [
@@ -196,3 +196,19 @@ let addressBook = [
 addressBook.push({ name: "John", phone: "690347585" ,email:"johny@gmail.com"});
 
 console.log(addressBook);
+
+let addressBook1= [];
+
+addressBook1.push({
+    name: "Alice",
+    phone: "670123456",
+    email: "alice@gmail.com"
+});
+
+addressBook1.push({
+    name: "Bob",
+    phone: "677111222",
+    email: "bob@gmail.com"
+});
+
+console.log(addressBook1);
