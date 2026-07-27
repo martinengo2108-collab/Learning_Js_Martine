@@ -1,7 +1,7 @@
  
  console.log('Hello World');
 
-
+/*Intro to JS and JS functions */
 function happyBirthday(username, age){
   console.log('Happy birthday to you');
   console.log('Happy birthday to you');
@@ -158,7 +158,7 @@ person1.Greetings();
 person2.Greetings();
 
 console.log(person2.fullName());
-
+/*objects and objects methods*/
 let contact = {
     name: "Alice",
     phoneNumbers: ["670123456", "677987654"],
@@ -212,3 +212,8 @@ addressBook1.push({
 });
 
 console.log(addressBook1);
+/*Document Objects Methods*/
+
+const username=" ";
+const welcMsg = document.getElementById("hello");
+welcMsg.textContent += username === "" ? "Guest" : username;
