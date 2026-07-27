@@ -159,6 +159,14 @@ person2.Greetings();
 
 console.log(person2.fullName());
 
+let contact = {
+    name: "Alice",
+    phoneNumbers: ["670123456", "677987654"],
+    emails: ["alice@gmail.com", "alice@yahoo.com"]
+};
+
+console.log(contact.phoneNumbers);
+
 let person = {
     name: ["Alice"],
     phones: ["670123456"]
