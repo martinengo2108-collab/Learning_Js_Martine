@@ -214,6 +214,6 @@ addressBook1.push({
 console.log(addressBook1);
 /*Document Objects Methods*/
 
-const username=" ";
+const username=" Martinou";
 const welcMsg = document.getElementById("hello");
-welcMsg.textContent += username === "" ? "Guest" : username;
+welcMsg.textContent += username === "" ? " Guest" : username;
