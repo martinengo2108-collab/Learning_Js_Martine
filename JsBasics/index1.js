@@ -160,10 +160,11 @@ person2.Greetings();
 console.log(person2.fullName());
 
 let person = {
-    name: "Alice",
+    name: ["Alice"],
     phones: ["670123456"]
 };
 
+person.name.push("Naomie")
 person.phones.push("677987654");
 
 console.log(person);
