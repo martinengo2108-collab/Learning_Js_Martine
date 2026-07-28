@@ -4,6 +4,43 @@
     box-sizing: border-box;
 }
  
+:root{
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+
+}
+body{
+    font-family: "Work sans",sans-serif;
+    background-color:var(--Purple-100);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-position: top;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+.container , .acc-content{
+    background-color:var(--White) ;
+    max-width: 600px;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+.faq-header{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.faq-header h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.acc-content{
+    width: 100%;
+}
 .attribution {
      font-size: 0.6875rem; 
      text-align: center;
