@@ -219,12 +219,18 @@ const welcMsg = document.getElementById("hello");
 welcMsg.textContent += username === "" ? " Guest" : username;
 /*Using promises */
 
-let p = newPromises((resolve,reject){
-  let a = 1+1;
+let p = new Promise((resolve,reject) => {
+  let a = 1+8;
   if(a == 2){
     resolve("Sucess")
   }
   else{
     reject("Failure")
   }
+})
+p.then((message)=> {
+  console.log("This is in the then " +message)
+}).catch((message) =>{ 
+  console.log("This is in the catch "+message)
+  
 })
