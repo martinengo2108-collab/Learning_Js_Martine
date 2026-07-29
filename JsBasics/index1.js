@@ -234,3 +234,11 @@ p.then((message)=> {
   console.log("This is in the catch "+message)
   
 })
+/*Use of callbacks in promises*/
+const userLeft = false
+const userWatchingcatMeme = true
+
+function watchTutorialcallback(callback,errorCall){
+
+}
+
