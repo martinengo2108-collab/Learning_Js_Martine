@@ -217,3 +217,14 @@ console.log(addressBook1);
 const username=" Martinou";
 const welcMsg = document.getElementById("hello");
 welcMsg.textContent += username === "" ? " Guest" : username;
+/*Using promises */
+
+let p = newPromises((resolve,reject){
+  let a = 1+1;
+  if(a == 2){
+    resolve("Sucess")
+  }
+  else{
+    reject("Failure")
+  }
+})
