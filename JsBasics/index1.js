@@ -219,7 +219,7 @@ const welcMsg = document.getElementById("hello");
 welcMsg.textContent += username === "" ? " Guest" : username;
 /*Using promises */
 
-let p = new Promise((resolve, reject) => {
+/*let p = new Promise((resolve, reject) => {
   let a = 1 + 8;
   if (a == 2) {
     resolve("Sucess")
@@ -233,10 +233,10 @@ p.then((message) => {
 }).catch((message) => {
   console.log("This is in the catch " + message)
 
-})
+})*/
 /*Use of callbacks in promises*/
 const userLeft = false
-const userWatchingcatMeme = true
+const userWatchingcatMeme = false
 
 function watchTutorialcallback(callback, errorCallBack) {
   if (userLeft) {
@@ -256,7 +256,7 @@ function watchTutorialcallback(callback, errorCallBack) {
   }
 }
 watchTutorialcallback((message) => {
-  console.log("Sucess:" + message)
+  console.log("Sucess: " + message)
 }, (error) => {
   console.log(error.name + " " + error.message)
 })
@@ -282,3 +282,8 @@ function watchTutorialPromise() {
   
 }
 
+watchTutorialPromise(() => {
+  console.log("Sucess: " + message)
+}, (error) => {
+  console.log(error.name + " " + error.message)
+})
