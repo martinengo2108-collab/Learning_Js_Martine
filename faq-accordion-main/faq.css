@@ -23,9 +23,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
     min-width: 400px;
     background-repeat: no-repeat;
+    padding-bottom: 16px;
+    padding-top: 16px;
 }
 .container {
     background-color:var(--White) ;
@@ -47,29 +48,30 @@ body{
     padding-left: 10px;
 }
 .faq-header h1{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    width: 95%;
 }
 .acc-content{
     width: 100%;
     margin-bottom: 10px;
-
-
 }
 .acc-items{
     margin-bottom: 1rem;
     border-bottom: 0.5px solid rgba(128, 118, 118, 0.185);
 }
 .acc-header{
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    border: none;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: inherit;
     cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 15px;
     font-weight: 700;
     position: relative;
-    padding: 18px 0;
-    display: flex;
-    align-items: center;
+    right: 10px;
+    top: 25px;
 }
 .faq-header:hover{
     color: var(--Purple-600);
@@ -80,7 +82,7 @@ body{
     transition: max-height 0.3s ease,padding 0.3s ease;
 }
 .acc-items.active{
-    max-height: fix-content;
+    max-height: min-content;
     margin-bottom: 1rem;
 }
 
