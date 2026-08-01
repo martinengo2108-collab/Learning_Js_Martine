@@ -19,3 +19,25 @@ body{
    /* max-width: 550px;*/
     text-align: center;
 }
+h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+}
+.subtitle{
+    color: antiquewhite;
+    margin-bottom: 2rem;
+}
+.card-container{
+    background: rgba(255, 255, 255, 0.342);
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 225, 255, 0.152);
+
+}
+input{
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    outline: none;
+}
