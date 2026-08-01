@@ -42,7 +42,6 @@ body{
     display: block;
     box-shadow: 0px 30px 100px -50px black;
 
-
 }
 .faq-header{
     display: flex;
@@ -53,6 +52,13 @@ body{
 }
 .faq-header h1{
     font-weight: 700;
+}
+.acc-content{
+    padding-bottom: -2.5rem;
+}
+.acc-items{
+
+    
 }
 /*.acc-content{
     width: 100%;
