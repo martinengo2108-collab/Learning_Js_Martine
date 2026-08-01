@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number guessing game</title>
+    <link rel="stylesheet" href="guessinggame.css">
 </head>
 <body>
     <div class="container">
@@ -14,10 +15,30 @@
         </p>
         <div class="card-container">
             <input type="number" id="guessInput" placeholder="Enter your guess">
+
             <button id="guessBtn">Guess</button>
+
+            <h2 id="message">Start Guessing ...</h2>
+            <div class="info">
+                <div class="box">
+                    <h3 id="attempts">0</h3>
+
+                    <p>Attempts</p>
+
+                </div>
+                <div class="box">
+                    <h3 id="bestScore">---</h3>
+                    <p>Best Score</p>
+
+
+                </div>
+            </div>
+            <button id="restartBtn">
+                🎯 New game
+            </button>
 
         </div>
     </div>
-    
+    <script src="guessinggame.js"></script>
 </body>
 </html>
