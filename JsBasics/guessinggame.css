@@ -64,8 +64,16 @@ input::placeholder{
     color: rgba(39, 39, 158, 0.747);
 }
 .info{
-   
    display: flex;
    gap: 20px;
+   padding: 20px;
+   justify-content: center;
+}
+.box1,.box2{
+    background: rgba(255, 255, 255, 0.342);
+    padding: 20px;
+    flex: 0.3;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 225, 255, 0.152);
 }
 
