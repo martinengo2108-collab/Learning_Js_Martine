@@ -58,6 +58,8 @@ input::placeholder{
     cursor: pointer;
     font-size: 1rem;
     margin-bottom: 1rem;
+    font-weight: 800;
+
     
 }
 #guessBtn:hover{
@@ -75,5 +77,28 @@ input::placeholder{
     flex: 0.3;
     border-radius: 25px;
     border: 1px solid rgba(255, 225, 255, 0.152);
+}
+.box1 p{
+    font-size: 1.5rem;
+    display: flex;
+    font-weight: 700;
+    color: #FFF176;
+    align-items: center;
+    justify-content: center;
+}
+.box2 p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFF176;
+}
+#restartBtn{
+    width: 50%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: -0.5rem;
+    font-weight: 800;
 }
 
