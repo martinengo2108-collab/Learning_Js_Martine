@@ -20,7 +20,7 @@ document.getElementById("guessBtn").addEventListener("click" , ()=>{
     if(!guess || guess<1 || guess>100){
         message.textContent =" Enter a number between 1 and 100";
 
-        message.style.color = "#2b29256e";
+        message.style.color = "#2b29257e";
 
         return;
     }
@@ -28,9 +28,9 @@ document.getElementById("guessBtn").addEventListener("click" , ()=>{
 
     attemptsEl.textContent = attempts;
     if(guess === randomNumber){
-            message.textContent = "🎉Great! The number was $(randomNumber)";
+            message.textContent = `🎉Great! The number was ${randomNumber}`;
 
-            message.style.color ="#22c55e"
+            message.style.color =" #A7FFEB"
 
             if(!bestScore || attempts < bestScore){
 
@@ -69,5 +69,5 @@ document.getElementById("restartBtn").addEventListener("click" ,()=>{
     message.textContent = "Start Guessing...";
 
     message.style.color = "#fff";
-    guessInput.value ="";
+    guessInput.value =" ";
 });
