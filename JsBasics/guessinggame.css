@@ -65,6 +65,10 @@ input::placeholder{
     font-weight: 800;
    
 }
+#guessBtn:hover{
+    color:rgba(39, 39, 158, 0.747);
+    box-shadow: 0 0 20px;
+}
 .info{
    display: flex;
    gap: 20px;
@@ -105,4 +109,20 @@ input::placeholder{
 #restartBtn:hover{
     color:rgba(39, 39, 158, 0.747);
     box-shadow: 0 0 20px;
+}
+
+@media(max-width:400px){
+    h1{
+        font-size: 2rem;
+    }
+    .card-container{
+        padding: 25px;
+    }
+    .box1,.box2{
+        width: 100%;
+    }
+    .info{
+        align-items: center;
+        flex-direction: column;
+    }
 }
