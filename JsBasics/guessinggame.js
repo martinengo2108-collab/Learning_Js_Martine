@@ -55,10 +55,19 @@ document.getElementById("guessBtn").addEventListener("click" , ()=>{
 
 
     }
-    
+
+});
 
 
+document.getElementById("restartBtn").addEventListener("click" ,()=>{
+    randomNumber = Math.floor(Math.random()*100 )+1;
 
+    attempts = 0;
 
+    attemptsEl.textContent =0;
 
-})
+    message.textContent = "Start Guessing...";
+
+    message.style.color = "#fff";
+    guessInput.value ="";
+});
