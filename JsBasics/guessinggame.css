@@ -13,6 +13,7 @@ body{
     background-color: rgba(39, 39, 158, 0.747);
     padding: 2rem;
     color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.507);
 
 }
 .container{
@@ -23,8 +24,8 @@ body{
 h1{
     font-size: 3rem;
     margin-bottom: 1rem;
-
 }
+
 .subtitle{
     color: antiquewhite;
     margin-bottom: 2rem;
@@ -58,18 +59,19 @@ input::placeholder{
     cursor: pointer;
     font-size: 1rem;
     margin-bottom: 1rem;
+    background-color: #A7FFEB;
     font-weight: 800;
-
-    
-}
-#guessBtn:hover{
-    color: rgba(39, 39, 158, 0.747);
+   
 }
 .info{
    display: flex;
    gap: 20px;
    padding: 20px;
    justify-content: center;
+}
+.info p{
+    font-size: 18px;
+    font-weight: 700;
 }
 .box1,.box2{
     background: rgba(255, 255, 255, 0.342);
@@ -78,27 +80,26 @@ input::placeholder{
     border-radius: 25px;
     border: 1px solid rgba(255, 225, 255, 0.152);
 }
-.box1 p{
+.box1 h3,.box2 h3{
     font-size: 1.5rem;
-    display: flex;
     font-weight: 700;
     color: #FFF176;
-    align-items: center;
-    justify-content: center;
+   
 }
-.box2 p{
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #FFF176;
+#message{
+    padding-bottom: 1.5rem;
 }
 #restartBtn{
     width: 50%;
     padding: 1.5rem;
     border: none;
-    border-radius: 15px;
+    border-radius: 2.5rem;
     cursor: pointer;
     font-size: 1rem;
     margin-bottom: -0.5rem;
     font-weight: 800;
-}
 
+}
+#restartBtn:hover{
+    color:rgba(39, 39, 158, 0.747);
+}
