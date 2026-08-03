@@ -43,6 +43,18 @@ document.getElementById("guessBtn").addEventListener("click" , ()=>{
 
     }
 
+    else if(guess >randomNumber){
+        message.textContent = "📈 Too high";
+
+        message.style.color = "#ef4444"
+    }
+    else{
+        message.textContent ="📈Too low ";
+
+        message.style.color = "#38bdf8";
+
+
+    }
     
 
 
