@@ -20,7 +20,7 @@ document.getElementById("guessBtn").addEventListener("click" , ()=>{
     if(!guess || guess<1 || guess>100){
         message.textContent =" Enter a number between 1 and 100";
 
-        message.style.color = "#facc15";
+        message.style.color = "#2b29256e";
 
         return;
     }

@@ -32,10 +32,10 @@ h1{
     font-size: 1rem;
 }
 .card-container{
-    background: rgba(255, 255, 255, 0.342);
+    background: rgba(255, 255, 255, 0.226);
     padding: 40px;
     border-radius: 25px;
-    border: 1px solid rgba(255, 225, 255, 0.152);
+    border: 1px solid rgba(255, 225, 255, 0.233);
 
 }
 input{
