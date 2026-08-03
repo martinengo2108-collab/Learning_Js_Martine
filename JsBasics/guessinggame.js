@@ -34,11 +34,19 @@ document.getElementById("guessBtn").addEventListener("click" , ()=>{
 
             if(!bestScore || attempts < bestScore){
 
-                localStorage.set
+                localStorage.setItem(
+                    "bestScore" , attempts
+                );
+            
+            document.getElementById("bestScore").textContent = attempts;
             }
 
-
     }
+
+    
+
+
+
 
 
 })
