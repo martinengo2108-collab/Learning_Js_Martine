@@ -67,7 +67,6 @@ input::placeholder{
 #guessBtn:hover{
     color:rgba(39, 39, 158, 0.747);
     box-shadow: 0 0 20px;
-    transform: translateY(3px);
 }
 
 .info{
@@ -118,6 +117,7 @@ input::placeholder{
 #restartBtn:hover{
     color:rgba(39, 39, 158, 0.747);
     box-shadow: 0 0 20px;
+    transform: translateY(3px)
 }
 
 @media(max-width:600px){
