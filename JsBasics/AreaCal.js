@@ -35,7 +35,7 @@ function calculateArea(){
         case "rectangle" :
         let Length = document.getElementById("id-length").value;
         let Width = document.getElementById("id-width").value;
-
+        area = Length * Width;
         break;
     case "triangle":
         let Base = document.getElementById("base").value;
@@ -46,14 +46,22 @@ function calculateArea(){
         break;
     case "circle":
         let Radius =document.getElementById("radius").value;
+
+        area = Math.PI* Radius*Radius;
         break;
     case "ellipse":
-        document.getElementById("ellipse-inputs").hidden = false;
+        let a=document.getElementById("minor-axis").value;
+        let b=document.getElementById("major-axis").value;
+
+        area=Math.PI * a*b ;
+
         break;
     case "square":
-        document.getElementById("square-inputs").hidden =false;
+        let Side= document.getElementById("id-side").value;
+        area= Side * Side;
+
         break;
     }
 
-
+    document.getElementById("output").innerHTML ="Area =" = area;
 }
