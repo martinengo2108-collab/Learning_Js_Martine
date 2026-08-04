@@ -84,10 +84,11 @@ input::placeholder{
 .box1,.box2{
     background: rgba(255, 255, 255, 0.342);
     padding: 10px;
-    flex: 0.3;
+    flex: 0.5;
     border-radius: 25px;
     width: 100%;
     border: 1px solid rgba(255, 225, 255, 0.152);
+
 }
 
 .box1 h3,.box2 h3{
