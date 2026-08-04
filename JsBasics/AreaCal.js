@@ -26,3 +26,9 @@ switch (shape){
         break;
 }
 }
+
+function calculateArea(){
+    
+
+
+}
