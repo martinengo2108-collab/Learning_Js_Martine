@@ -26,6 +26,8 @@
         <br>
         <label for="id-shapes"><h2>Choose a shape</h2></label>
         <select  id="id-shapes">
+
+            <option value="none"></option>
             <option value="rectangle">Rectangle</option>
             <option value="triangle">Triangle</option>
             <option value="circle">Circle</option>
@@ -51,8 +53,26 @@
             <input type="number" min="0" step="any">
             <h2><em>Area =<sup>H*B</sup>&frasl;<sub>2</sub></em></h2>
 
+        </div>
+        <div id="circle-inputs" hidden>
+            <label for="radius">Radius</label>
+            <input type="number" min="0" step="any">
+
+            <label for="id-diameter">Diameter</label>
+            <input type="number" min="0" step="any">
+            <h2><em>Area =&Pi;r<sup>2</sup></em></h2>
 
         </div>
+         <div id="circle-inputs" hidden>
+            <label for="radius">Radius</label>
+            <input type="number" min="0" step="any">
+
+            <label for="id-diameter">Diameter</label>
+            <input type="number" min="0" step="any">
+            <h2><em>Area =&Pi;r<sup>2</sup></em></h2>
+
+        </div>
+
         <input type="submit" value="Calculte Area">
 
         <p id="output"></p>
