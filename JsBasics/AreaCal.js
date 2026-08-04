@@ -63,5 +63,5 @@ function calculateArea(){
         break;
     }
 
-    document.getElementById("output").innerHTML = "Area = " + area;
+    document.getElementById("output").textContent = "Area = " + area;
 }
