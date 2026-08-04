@@ -28,7 +28,32 @@ switch (shape){
 }
 
 function calculateArea(){
-    
+    let shape = document.getElementById("id-shapes").value;
+
+    let area = 0;
+    switch(shape){
+        case "rectangle" :
+        let Length = document.getElementById("id-length").value;
+        let Width = document.getElementById("id-width").value;
+
+        break;
+    case "triangle":
+        let Base = document.getElementById("base").value;
+        let Heigth = document.getElementById("id-heigth").value;
+
+        area = Base * Heigth /2 ;
+
+        break;
+    case "circle":
+        let Radius =document.getElementById("radius").value;
+        break;
+    case "ellipse":
+        document.getElementById("ellipse-inputs").hidden = false;
+        break;
+    case "square":
+        document.getElementById("square-inputs").hidden =false;
+        break;
+    }
 
 
 }
