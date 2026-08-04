@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AreaCal.css">
     <title>Area Calculator</title>
 </head>
 
@@ -13,16 +14,10 @@
             <h1>Welcome to the Area Calculator</h1>
 
             <p>This page calcultes the areas of different geometric shapes</p>
-
-            <h2>Select a shape</h2>
             
-
         </div>
         <hr>
-        <div class="calculator">
-            Calculator code goes here
-            
-        </div>
+        
         <br>
         <label for="id-shapes"><h2>Choose a shape</h2></label>
         <select  id="id-shapes">
@@ -34,7 +29,7 @@
             <option value="ellipse">Ellipse</option>
             <option value="square">Square</option>
         </select>
-        <div id="rect-input" hidden>
+        <div id="rect-inputs" hidden>
             <label for="id-length">Length</label>
             <input type="number" min="0" step="any">
 
@@ -63,13 +58,20 @@
             <h2><em>Area =&Pi;r<sup>2</sup></em></h2>
 
         </div>
-         <div id="circle-inputs" hidden>
-            <label for="radius">Radius</label>
+         <div id="ellipse-inputs" hidden>
+            <label for="minor-axis">a</label>
             <input type="number" min="0" step="any">
 
-            <label for="id-diameter">Diameter</label>
+            <label for="major-axis">b</label>
             <input type="number" min="0" step="any">
-            <h2><em>Area =&Pi;r<sup>2</sup></em></h2>
+            <h2><em>Area =&Pi;a*b</em></h2>
+
+        </div>
+        <div id="square-inputs" hidden>
+            <label for="id-side">Side</label>
+            <input type="number" min="0" step="any">
+
+            <h2><em>Area = s<sup>2</sup></em></h2>
 
         </div>
 
@@ -78,6 +80,7 @@
         <p id="output"></p>
         
     </div>
+    <script src="AreaCal.js"></script>
 
 </body>
 
