@@ -4,3 +4,14 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(39, 39, 158, 0.747);
+    padding: 32px;
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.507);
+
+}
