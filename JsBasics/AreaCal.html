@@ -14,11 +14,49 @@
 
             <p>This page calcultes the areas of different geometric shapes</p>
 
-            <h3>Select a shape</h3>
+            <h2>Select a shape</h2>
+            
 
         </div>
-
         <hr>
+        <div class="calculator">
+            Calculator code goes here
+            
+        </div>
+        <br>
+        <label for="id-shapes"><h2>Choose a shape</h2></label>
+        <select  id="id-shapes">
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle</option>
+            <option value="circle">Circle</option>
+            <option value="ellipse">Ellipse</option>
+            <option value="square">Square</option>
+        </select>
+        <div id="rect-input" hidden>
+            <label for="id-length">Length</label>
+            <input type="number" min="0" step="any">
+
+            <label for="id-width">Width</label>
+            <input type="number" min="0" step="any">
+
+            <h2><em>Area = L*W </em></h2>
+        
+
+        </div>
+        <div id="triangle-inputs" hidden>
+            <label for="base">Base</label>
+            <input type="number" min="0" step="any">
+
+            <label for="id-heigth">Height</label>
+            <input type="number" min="0" step="any">
+            <h2><em>Area =<sup>H*B</sup>&frasl;<sub>2</sub></em></h2>
+
+
+        </div>
+        <input type="submit" value="Calculte Area">
+
+        <p id="output"></p>
+        
     </div>
 
 </body>
