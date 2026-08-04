@@ -9,9 +9,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(39, 39, 158, 0.747);
+    background-color: rgba(167, 167, 201, 0.747);
     padding: 32px;
-    color: aliceblue;
+    color: rgb(23, 24, 26);
     box-shadow: rgba(0, 0, 0, 0.507);
 
+}
+.main{
+    width: 100%;
+   max-width: 550px;
+    text-align: center;
 }
