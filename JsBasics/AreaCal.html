@@ -9,77 +9,81 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="welcm">
-            <h1>Welcome to the Area Calculator</h1>
+    <form action="javascript:calculateArea()" onchange="javascript:updateForm()">
+        <div class="main">
+            <div class="welcm">
+                <h1>Welcome to the Area Calculator</h1>
 
-            <p>This page calcultes the areas of different geometric shapes</p>
-            
-        </div>
-        
-        
-        
-        <label for="id-shapes"><h2>Choose a shape</h2></label>
-        <br>
-        <select  id="id-shapes">
+                <p>This page calcultes the areas of different geometric shapes</p>
 
-            <option value="none"></option>
-            <option value="rectangle">Rectangle</option>
-            <option value="triangle">Triangle</option>
-            <option value="circle">Circle</option>
-            <option value="ellipse">Ellipse</option>
-            <option value="square">Square</option>
-        </select>
-        <div id="rect-inputs" hidden>
-            <label for="id-length">Length</label>
-            <input type="number" min="0" step="any">
+            </div>
 
-            <label for="id-width">Width</label>
-            <input type="number" min="0" step="any">
 
-            <h2><em>Area = L*W </em></h2>
-        
 
-        </div>
-        <div id="triangle-inputs" hidden>
-            <label for="base">Base</label>
-            <input type="number" min="0" step="any">
-
-            <label for="id-heigth">Height</label>
-            <input type="number" min="0" step="any">
-            <h2><em>Area =<sup>H*B</sup>&frasl;<sub>2</sub></em></h2>
-
-        </div>
-        <div id="circle-inputs" hidden>
-            <label for="radius">Radius</label>
-            <input type="number" min="0" step="any">
-
-            <h2><em>Area =&Pi;r<sup>2</sup></em></h2>
-
-        </div>
-         <div id="ellipse-inputs" hidden>
-            <label for="minor-axis">a</label>
-            <input type="number" min="0" step="any">
-
-            <label for="major-axis">b</label>
-            <input type="number" min="0" step="any">
-            <h2><em>Area =&Pi;a*b</em></h2>
-
-        </div>
-        <div id="square-inputs" hidden>
-            <label for="id-side">Side</label>
-            <input type="number" min="0" step="any">
-
-            <h2><em>Area = s<sup>2</sup></em></h2>
-
-        </div>
+            <label for="id-shapes">
+                <h2>Choose a shape</h2>
+            </label>
             <br>
-        <input type="submit" value="Calculte Area">
+            <select id="id-shapes">
 
-        <p id="output"></p>
-        
-    </div>
-    <script src="AreaCal.js"></script>
+                <option value="none"></option>
+                <option value="rectangle">Rectangle</option>
+                <option value="triangle">Triangle</option>
+                <option value="circle">Circle</option>
+                <option value="ellipse">Ellipse</option>
+                <option value="square">Square</option>
+            </select>
+            <div id="rect-inputs" hidden>
+                <label for="id-length">Length</label>
+                <input type="number" min="0" step="any">
+
+                <label for="id-width">Width</label>
+                <input type="number" min="0" step="any">
+
+                <h2><em>Area = L*W </em></h2>
+
+
+            </div>
+            <div id="triangle-inputs" hidden>
+                <label for="base">Base</label>
+                <input type="number" min="0" step="any">
+
+                <label for="id-heigth">Height</label>
+                <input type="number" min="0" step="any">
+                <h2><em>Area =<sup>H*B</sup>&frasl;<sub>2</sub></em></h2>
+
+            </div>
+            <div id="circle-inputs" hidden>
+                <label for="radius">Radius</label>
+                <input type="number" min="0" step="any">
+
+                <h2><em>Area =&Pi;r<sup>2</sup></em></h2>
+
+            </div>
+            <div id="ellipse-inputs" hidden>
+                <label for="minor-axis">a</label>
+                <input type="number" min="0" step="any">
+
+                <label for="major-axis">b</label>
+                <input type="number" min="0" step="any">
+                <h2><em>Area =&Pi;a*b</em></h2>
+
+            </div>
+            <div id="square-inputs" hidden>
+                <label for="id-side">Side</label>
+                <input type="number" min="0" step="any">
+
+                <h2><em>Area = s<sup>2</sup></em></h2>
+
+            </div>
+            <br>
+            <input type="submit" value="Calculte Area">
+
+            <p id="output"></p>
+
+        </div>
+        <script src="AreaCal.js"></script>
+    </form>
 
 </body>
 
