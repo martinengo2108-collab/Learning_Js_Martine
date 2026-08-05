@@ -12,6 +12,7 @@ body{
     background-color: rgba(124, 150, 81, 0.747);
     padding: 32px;
     color: rgb(35, 38, 44);
+
 }
 .main{
     width: 100%;
@@ -20,7 +21,7 @@ body{
 }
 .welcm-container{
     background: rgba(255, 255, 255, 0.288);
-    padding: 70px;
+    padding: 80px;
     border-radius: 25px;
     border: 1px solid rgba(255, 225, 255, 0.233);
     box-shadow: 0 0 20px rgba(22, 20, 20, 0.466);
@@ -35,4 +36,9 @@ body{
     margin-bottom: 1.5rem;
     font-weight: bold;
 }
-
+#id-shapes{
+    padding: 1rch;
+    border: none;
+    border-radius: 10cqb;
+    margin-bottom: 2rem;
+}
