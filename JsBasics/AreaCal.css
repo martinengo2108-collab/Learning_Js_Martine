@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgba(124, 150, 81, 0.747);
-    padding: 32px;
+    padding: 28px;
     color: rgb(35, 38, 44);
 
 }
@@ -21,7 +21,7 @@ body{
 }
 .welcm-container{
     background: rgba(255, 255, 255, 0.288);
-    padding: 80px;
+    padding: 60px;
     border-radius: 25px;
     border: 1px solid rgba(255, 225, 255, 0.233);
     box-shadow: 0 0 20px rgba(22, 20, 20, 0.466);
@@ -53,9 +53,10 @@ label{
     font-size: 2rex;
 }
 input{
-    padding: 0.5rex;
+    padding: 1rex;
     border: none;
     border-radius: 25px;
+
 }
 button{
     border:  1px solid rgba(255, 225, 255, 0.233);
