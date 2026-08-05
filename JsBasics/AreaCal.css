@@ -55,3 +55,12 @@ input{
     border: none;
     border-radius: 25px;
 }
+button{
+    border: none;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    box-shadow:  0 0 20px rgba(22, 20, 20, 0.466);
+
+    
+}
