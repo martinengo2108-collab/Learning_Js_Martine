@@ -33,24 +33,28 @@ body{
 .container {
     background-color:var(--White) ;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     padding: 30px;
     border-radius: 15px;
     color: hsl(292, 42%, 14%);
     display: block;
-    box-shadow: 0px 30px 100px -50px black;
+    box-shadow: 0px 30px 100px -50px rgb(53, 45, 45);
 
 }
 .faq-header{
-    display: block;
-    gap: 10px;
-    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+    padding-left: -2px;
+  
 }
 .faq-header h1{
     font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
+
 .acc-content{
-    padding-top: 1.5rem;
+    padding: 0.5rem;
 }
 .acc-items{
 
@@ -58,8 +62,15 @@ body{
 
 }
 .acc-items button{
-    
+    font-size: 1.2rem;
+    font-weight: 600;
     border: none;
+    background-color: white;
+    
+}
+.acc-header img{
+    padding-inline-end: 1;
+ 
 }
 
 
