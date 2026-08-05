@@ -58,14 +58,15 @@ input{
     border-radius: 25px;
 }
 button{
-    border: none;
+    border:  1px solid rgba(255, 225, 255, 0.233);
     padding: 20px;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     box-shadow:  rgba(22, 20, 20, 0.466);
     background-color: #ecb54fbd;
     cursor: pointer;
     margin-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
 
     
 }
