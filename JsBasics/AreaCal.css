@@ -37,11 +37,12 @@ body{
     font-weight: bold;
 }
 #id-shapes{
-    padding: 1rch;
+    padding: 1rem;
     border: none;
     border-radius: 10cqb;
     margin-bottom: 2rem;
     cursor: pointer;
+    width: 50%;
 }
 #id-shapes option{
     font-size: 1.5rem;
@@ -64,6 +65,7 @@ button{
     box-shadow:  rgba(22, 20, 20, 0.466);
     background-color: #ecb54fbd;
     cursor: pointer;
+    margin-top: 2rem;
 
     
 }
