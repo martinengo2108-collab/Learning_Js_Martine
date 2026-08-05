@@ -41,6 +41,7 @@ body{
     border: none;
     border-radius: 10cqb;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 #id-shapes option{
     font-size: 1.5rem;
@@ -60,7 +61,13 @@ button{
     padding: 20px;
     border-radius: 25px;
     font-size: 1rem;
-    box-shadow:  0 0 20px rgba(22, 20, 20, 0.466);
+    box-shadow:  rgba(22, 20, 20, 0.466);
+    background-color: #ecb54fbd;
+    cursor: pointer;
 
     
+}
+button:hover{
+    box-shadow: 0 0 20px;
+    transform: translateY(3px)
 }
