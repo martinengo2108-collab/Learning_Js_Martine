@@ -42,3 +42,8 @@ body{
     border-radius: 10cqb;
     margin-bottom: 2rem;
 }
+#id-shapes option{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
