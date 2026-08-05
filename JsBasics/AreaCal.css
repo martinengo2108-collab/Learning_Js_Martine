@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body{
     min-height: 100vh;
@@ -43,7 +43,15 @@ body{
     margin-bottom: 2rem;
 }
 #id-shapes option{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
 
+}
+label{
+    font-size: 2rex;
+}
+input{
+    padding: 0.5rex;
+    border: none;
+    border-radius: 25px;
 }
