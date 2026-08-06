@@ -14,6 +14,13 @@ headers.forEach(header =>  {
             }
 
 
+        });
+
+        document.querySelectorAll(".open").forEach(icon =>{
+
+            if(content !==currentContent){
+                content.classList
+            }
         })
     })
 })
