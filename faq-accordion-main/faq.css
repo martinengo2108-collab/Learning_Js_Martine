@@ -70,7 +70,7 @@ body{
 }
 
 .acc-content.show{
-    display: block;
+    display: flex;
 }
 .open{
     width: 30px;
@@ -89,9 +89,7 @@ body{
     padding: 1rem 0;
 
 }
-.acc-header:hover{
-    color:hsla(281, 50%, 27%, 0.336);
-}
+
 
 @media(max-width:768px){
     .faq-header h1{

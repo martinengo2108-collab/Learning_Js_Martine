@@ -10,7 +10,7 @@ headers.forEach(header =>  {
         const isOpen = currentContent.classList.contains("show");
 
 
-        document.querySelectorAll("acc-content").forEach(content =>{
+        document.querySelectorAll(".acc-content").forEach(content =>{
 
                 content.classList.remove("show");
             
@@ -22,7 +22,7 @@ headers.forEach(header =>  {
         
         });
 
-        if(isOpen){
+        if(!isOpen){
             currentContent.classList.add("show");
 
             currentIcon.src ="./assets/images/icon-minus.svg";
