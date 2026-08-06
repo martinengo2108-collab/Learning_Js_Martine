@@ -67,6 +67,10 @@ body{
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
+
+.acc-content.show{
+    display: block;
+}
 .open{
     width: 30px;
     cursor: pointer;
