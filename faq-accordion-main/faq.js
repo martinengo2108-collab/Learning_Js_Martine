@@ -21,6 +21,14 @@ headers.forEach(header =>  {
             if(icon !==currentIcon){
                 icon.src ="./assets/images/icon-plus.svg";
             }
-        })
-    })
-})
+        });
+        currentContent.classList.toggle("show");
+
+        if(currentContent.classList.contains("show")){
+            currentIcon.src ="./assets/images/icon-minus.svg";
+
+        }else{
+            currentIcon.src ="./assets/images/icon-plus.svg";
+        }
+    });
+});

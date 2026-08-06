@@ -89,7 +89,7 @@ body{
 
 }
 .acc-header:hover{
-    color:hsl(281,83%,54%);
+    color:hsla(281, 50%, 27%, 0.336);
 }
 
 @media(max-width:768px){
