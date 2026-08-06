@@ -10,7 +10,7 @@ headers.forEach(header =>  {
         document.querySelectorAll("acc-content").forEach(content =>{
 
             if(content !== currentContent){
-                content.classList.remove("show")
+                content.classList.remove("show");
             }
 
 
@@ -18,8 +18,8 @@ headers.forEach(header =>  {
 
         document.querySelectorAll(".open").forEach(icon =>{
 
-            if(content !==currentContent){
-                content.classList
+            if(icon !==currentIcon){
+                icon.src ="./assets/images/icon-plus.svg";
             }
         })
     })
