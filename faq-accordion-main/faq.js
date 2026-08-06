@@ -7,6 +7,9 @@ headers.forEach(header =>  {
 
         const currentIcon = header.querySelector(".open");
 
+        const isOpen = currentContent.classList.contains("show");
+
+
         document.querySelectorAll("acc-content").forEach(content =>{
 
             if(content !== currentContent){
