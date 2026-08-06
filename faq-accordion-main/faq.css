@@ -43,6 +43,7 @@ body{
 .faq-header{
     display: flex;
     gap: 20px;
+    padding-left: 0.4rem;
    
 }
 .faq-header h1{
@@ -56,19 +57,26 @@ body{
     
 }
 
-.acc-items button{
+/*.acc-items button{
     font-size: 1.2rem;
     font-weight: 600;
     border: none;
     background-color: white;
     margin-bottom: 1rem;
     
-}
+}*/
 .acc-header{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 800;
+    color:var(--Purple-950);
+    padding: 1rem 0;
+
 }
 
 @media(max-width:768px){
