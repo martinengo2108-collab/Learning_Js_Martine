@@ -66,6 +66,10 @@ body{
     color: var(--Purple-600);
     margin-bottom: 1rem;
 }
+.open{
+    width: 30px;
+    cursor: pointer;
+}
 .acc-header{
     width: 100%;
     display: flex;
