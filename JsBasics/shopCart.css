@@ -36,9 +36,10 @@ body h1{
 
 }
 
-.product-card img{
-    border-radius: 8px;
+.product-card button{
+    margin-top: 1rem;
 }
 .product-image{
     width: 100%;
+    border-radius: 8px;
 }
