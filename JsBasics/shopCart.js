@@ -21,3 +21,25 @@ document.querySelectorAll("add-to-cart").forEach(button => {
     });
 
 });
+
+
+function updateCartDisplay(){
+    cartItemslist.innerHTML = "";
+
+    let total = 0;
+    cart.forEach((item,index) =>{
+        const li = document.createElement("li");
+        li.className = "cart-item";
+        li.innerHTML = `
+        <span>$(item,name)</span>
+        <span>$$(item.price.toFixed(2))</span>
+        <button onclick ='removedFromCart($(index))'>&times</button>
+
+        `;
+        cartItemslist.appendChild(li);
+
+        total += item.price;
+    });
+
+    totalElement.textContent = total.toFixed(2);
+}
