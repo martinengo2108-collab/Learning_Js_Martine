@@ -43,3 +43,9 @@ function updateCartDisplay(){
 
     totalElement.textContent = total.toFixed(2);
 }
+
+function removedFromCart(index){
+    cart.splice(index,1);
+    updateCartDisplay();
+
+}
