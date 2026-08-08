@@ -49,3 +49,6 @@ function removedFromCart(index){
     updateCartDisplay();
 
 }
+document.querySelector("close-cart").addEventListener("click" ,()=>{
+    cartSidebar.classList.remove("active")
+});
