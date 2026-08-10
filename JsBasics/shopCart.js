@@ -5,8 +5,9 @@ const cartSidebar = document.querySelector(".cart-sidebar");
 const cartItemslist = document.querySelector(".cart-items");
 const totalElement = document.getElementById("total");
 
-document.querySelectorAll("add-to-cart").forEach(button => {
-    button.addEventListener("click" ,() =>{
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click" ,() => {
+
         const product = {
             id: button.dataset.id ,
             name: button.dataset.name,
@@ -17,6 +18,7 @@ document.querySelectorAll("add-to-cart").forEach(button => {
         cart.push(product);
 
         updateCartDisplay();
+
         cartSidebar.classList.add("active");
     });
 
@@ -24,16 +26,19 @@ document.querySelectorAll("add-to-cart").forEach(button => {
 
 
 function updateCartDisplay(){
+
     cartItemslist.innerHTML = ""
 
     let total = 0;
+    
     cart.forEach((item,index) =>{
         const li = document.createElement("li");
         li.className = "cart-item";
+
         li.innerHTML = `
-        <span>$(item,name)</span>
-        <span>$$(item.price.toFixed(2))</span>
-        <button onclick ='removedFromCart($(index))'>&times</button>
+        <span>${item.name}</span>
+        <span>${item.price.toFixed(0)} Fr</span>
+        <button onclick ='removedFromCart(${index})'>&times;</button>
 
         `;
         cartItemslist.appendChild(li);
@@ -41,7 +46,7 @@ function updateCartDisplay(){
         total += item.price;
     });
 
-    totalElement.textContent = total.toFixed(2);
+    totalElement.textContent = total.toFixed(0);
 }
 
 function removedFromCart(index){
@@ -49,6 +54,6 @@ function removedFromCart(index){
     updateCartDisplay();
 
 }
-document.querySelector("close-cart").addEventListener("click" ,()=>{
+document.querySelector(".close-cart").addEventListener("click" ,()=>{
     cartSidebar.classList.remove("active")
 });
