@@ -98,6 +98,11 @@ h3, p{
     font-weight: bold;
     width: 100%;
 }
+
+#thank-you{
+    font-weight: bold;
+    text-align: center;
+}
 .cart-sidebar.active{
     right: 0;
     
