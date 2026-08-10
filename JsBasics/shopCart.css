@@ -87,6 +87,17 @@ h3, p{
     font-size: 20px;
     cursor: pointer;
 }
+
+#checkout{
+    border: none;
+    border-radius: 4px;
+    padding: 1em;
+    margin-top: 2rem;
+    background-color: #ffdb58;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
 .cart-sidebar.active{
     right: 0;
     
