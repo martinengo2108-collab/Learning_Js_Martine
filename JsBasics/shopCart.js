@@ -60,3 +60,21 @@ document.querySelector(".close-cart").addEventListener("click" ,()=> {
 
     cartSidebar.classList.remove("active");
 });
+
+const checkoutButton = document.getElementById("checkout");
+
+const thankYouMessage = document.getElementById("thank-you");
+
+checkoutButton.addEventListener("click" , () =>{
+    if(cart.length === 0){
+
+        alert("Your cart is empty");
+        return;
+
+    }
+    thankYouMessage.textContent = "Thank you for you purchase! Glad to see you soon"
+
+    cart.length =0 ;
+
+    updateCartDisplay();
+});
