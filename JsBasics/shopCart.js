@@ -24,7 +24,7 @@ document.querySelectorAll("add-to-cart").forEach(button => {
 
 
 function updateCartDisplay(){
-    cartItemslist.innerHTML = "";
+    cartItemslist.innerHTML = "
 
     let total = 0;
     cart.forEach((item,index) =>{
