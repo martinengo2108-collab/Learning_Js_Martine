@@ -79,6 +79,14 @@ h3, p{
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
+
+.cart-item button {
+    border: none;
+    background: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
 .cart-sidebar.active{
     right: 0;
     

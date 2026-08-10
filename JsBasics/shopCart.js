@@ -6,7 +6,7 @@ const cartItemslist = document.querySelector(".cart-items");
 const totalElement = document.getElementById("total");
 
 document.querySelectorAll(".add-to-cart").forEach(button => {
-    
+
     button.addEventListener("click" ,() => {
 
         const product = {
@@ -56,7 +56,7 @@ function removedFromCart(index){
     updateCartDisplay();
 
 }
-document.querySelector(".close-cart").addEventListener("click" ,()=>{
+document.querySelector(".close-cart").addEventListener("click" ,()=> {
 
     cartSidebar.classList.remove("active");
 });
