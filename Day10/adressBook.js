@@ -94,3 +94,7 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
     emailInput ="";;
 
 });
+
+document.addEventListener("DOMContentLoaded", () =>{
+    phoneBook.init();
+});
