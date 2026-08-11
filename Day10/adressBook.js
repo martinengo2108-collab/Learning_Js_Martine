@@ -80,5 +80,17 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
     e.preventDefault();
 
     const fullNameInput = document.getElementById("fullName");
-    
-})
+    const phoneNumberInput = document.getElementById("phoneNumber");
+    const addressInput = document.getElementById("address");
+    const cityInput = document.getElementById("city");
+    const emailInput = document.getElementById("email");
+
+    phoneBook.addContact(fullNameInput.ariaValueMax.trim(),phoneNumberInput.ariaValueMax.trim());
+
+    fullNameInput.value ="";
+    phoneNumberInput = "";
+    addressInput ="";
+    cityInput ="";
+    emailInput ="";;
+
+});
