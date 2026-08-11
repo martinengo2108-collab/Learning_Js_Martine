@@ -39,20 +39,36 @@ function displayContacts() {
 
         });
             `
-
+    
 }
-contactForm.addEventListener("submit",(e)=>{
+contactForm.addEventListener("submit",(e) => {
     
     e.preventDefault();
 
     const newContact = {
     
-     id: Date.now(), // ID unique basé sur le temps
+        id: Date.now(),
         name: fullNameInput.value.trim(),
         phone: phoneNumberInput.value.trim(),
         address: addressInput.value.trim(),
         city: cityInput.value.trim(),
         email: emailInput.value.trim()
     };
-})
+
+    addressBook.push(newContact);
+
+    contactForm.rest();
+
+    displayContacts();
+    
+});
+
+function deleteContact(id){
+
+    addressBook = addressBook.filter(contact => contact.id !== id);
+
+    displayContacts();
+    
+
+}
 
