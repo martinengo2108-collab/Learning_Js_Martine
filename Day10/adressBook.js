@@ -1,4 +1,5 @@
-const phoneBook = {
+let phoneBook = 
+    {
 
     contacts:[],
 
@@ -75,6 +76,18 @@ const phoneBook = {
     }
 
 };
+let addressBook = [];
+
+const contactForm = document.getElementById('contactForm');
+const fullNameInput = document.getElementById('fullName');
+const phoneNumberInput = document.getElementById('phoneNumber');
+const addressInput = document.getElementById('address');
+const cityInput = document.getElementById('city');
+const emailInput = document.getElementById('email');
+const contactRows = document.getElementById('contactRows');
+const btnCancel = document.getElementById('btnCancel');
+
+
 document.getElementById("contactForm").addEventListener("submit",function(e){
 
     e.preventDefault();
