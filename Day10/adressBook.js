@@ -89,6 +89,17 @@ const btnCancel = document.getElementById('btnCancel');
 
 function displayContacts(){
     contactRows.innerHTML = "";
+
+     if( addressBook.length === 0){
+            tfoot.innerHTML = `<tr>
+                <td colspan="6" style = "text-align:center; color:#999;">No contacts saved yet.</td>
+            </tr>`;
+
+            return;
+        }
+
+
+
 }
 document.getElementById("contactForm").addEventListener("submit",function(e){
 
