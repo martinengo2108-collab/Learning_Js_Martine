@@ -87,7 +87,9 @@ const emailInput = document.getElementById('email');
 const contactRows = document.getElementById('contactRows');
 const btnCancel = document.getElementById('btnCancel');
 
-
+function displayContacts(){
+    contactRows.innerHTML = "";
+}
 document.getElementById("contactForm").addEventListener("submit",function(e){
 
     e.preventDefault();
