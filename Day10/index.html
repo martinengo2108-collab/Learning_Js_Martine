@@ -23,7 +23,7 @@
 
                 <input type="text" id="fullName" placeholder="Full Name" required>
 
-                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
 
                 <input type="text" id="address" placeholder="Address" required>
 
@@ -37,8 +37,26 @@
 
             <button type="submit" class="btn-cancel">Cancel</button>
 
-
         </form>
+
+        <div class="contact-list">
+            <h2>Saved Contact</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tfoot id="contactRows">
+
+                </tfoot>
+            </table>
+        </div>
 
 
     </div>
