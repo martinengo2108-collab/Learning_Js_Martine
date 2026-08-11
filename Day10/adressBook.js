@@ -31,7 +31,7 @@ function displayContacts() {
             <td>${contact.city}</td>
             <td>${contact.email}</td>
             <td>
-                <button class ="btn-delete" onclick = "phoneBook.deleteContact("$(contact.id)">Delete</button>
+                <button class ="btn-delete" onclick = "deleteContact("${contact.id}">Delete</button>
             </td>
             `;
 
@@ -48,8 +48,8 @@ contactForm.addEventListener("submit",(e) => {
     const newContact = {
     
         id: Date.now(),
-        name: fullNameInput.value.trim(),
-        phone: phoneNumberInput.value.trim(),
+        fullName: fullNameInput.value.trim(),
+        phoneNumber: phoneNumberInput.value.trim(),
         address: addressInput.value.trim(),
         city: cityInput.value.trim(),
         email: emailInput.value.trim()
@@ -57,7 +57,7 @@ contactForm.addEventListener("submit",(e) => {
 
     addressBook.push(newContact);
 
-    contactForm.rest();
+    contactForm.reset();
 
     displayContacts();
     
@@ -68,7 +68,12 @@ function deleteContact(id){
     addressBook = addressBook.filter(contact => contact.id !== id);
 
     displayContacts();
-    
+
 
 }
+    if(btnCancel){
+    btnCancel.addEventListener("click", () =>{
+        contactForm.reset();
+        })
+    };
 
