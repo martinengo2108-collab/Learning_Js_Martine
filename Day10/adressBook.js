@@ -47,6 +47,38 @@ const phoneBook = {
     render(){
 
         const tfoot = document.getElementById("contactRows");
+        tfoot.innerHTML ="";
+
+        if( this.contacts.length === 0){
+            tfoot.innerHTML = `<tr><td colspan="3" style = "text-align:center; color:#999;">No contacts saved yet.</td></tr>`;
+
+            return;
+        }
+
+        this.contacts.forEach(contacts =>{
+            const tr = document.createElement("tr")
+
+            tr.innerHTML =`
+            <td>${contact.fullName}</td>
+            <td>${contact.phoneNumber}</td>
+            <td>${contact.address}</td>
+            <td>${contact.city}</td>
+            <td>${contact.email}</td>
+            <td>
+                <button class ="btn-delete" onclick = "phoneBook.deleteContact("$(contact.id)">Delete</button>
+            </td>
+            `;
+
+            tfoot.appendChild(tr);
+
+        });
     }
 
-}
+};
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const fullNameInput = document.getElementById("fullName");
+    
+})
