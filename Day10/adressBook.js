@@ -20,17 +20,33 @@ const phoneBook = {
 
     },
 
-    addContact(name,phone) {
+    addContact(fullName,phoneNumber,address,city,email) {
 
         const newContact = {
             id: Date.now().toString(),
-            name:name,
-            phone:phone
+            fullName: fullName,
+            phoneNumber:phoneNumber,
+            address:address,
+            city: city,
+            email: email
         };
 
         this.contacts.push(newContact);
         this.saveToStorage();
         this.render();
+    },
+
+    deleteContact(id){
+
+        this.contacts = this.contacts.filter(contact => contact.id !== id);
+
+        this.saveToStorage();
+        this.render();
+    },
+
+    render(){
+
+        const tfoot = document.getElementById("contactRows");
     }
 
 }
