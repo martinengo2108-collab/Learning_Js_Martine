@@ -10,10 +10,10 @@ const emailInput = document.getElementById('email');
 const contactRows = document.getElementById('contactRows');
 const btnCancel = document.getElementById('btnCancel');
 
-function displayContacts(){
-    contactRows.innerHTML = "";
+function displayContacts() {
+    tfoot.innerHTML = "";
 
-     if( addressBook.length === 0){
+    if( addressBook.length === 0){
             tfoot.innerHTML = `<tr>
                 <td colspan="6" style = "text-align:center; color:#999;">No contacts saved yet.</td>
             </tr>`;
@@ -40,28 +40,19 @@ function displayContacts(){
         });
             `
 
-
 }
-document.getElementById("contactForm").addEventListener("submit",function(e){
-
+contactForm.addEventListener("submit",(e)=>{
+    
     e.preventDefault();
 
-    const fullNameInput = document.getElementById("fullName");
-    const phoneNumberInput = document.getElementById("phoneNumber");
-    const addressInput = document.getElementById("address");
-    const cityInput = document.getElementById("city");
-    const emailInput = document.getElementById("email");
+    const newContact = {
+    
+     id: Date.now(), // ID unique basé sur le temps
+        name: fullNameInput.value.trim(),
+        phone: phoneNumberInput.value.trim(),
+        address: addressInput.value.trim(),
+        city: cityInput.value.trim(),
+        email: emailInput.value.trim()
+    };
+})
 
-    phoneBook.addContact(fullNameInput.ariaValueMax.trim(),phoneNumberInput.ariaValueMax.trim());
-
-    fullNameInput.value ="";
-    phoneNumberInput = "";
-    addressInput ="";
-    cityInput ="";
-    emailInput ="";;
-
-});
-
-document.addEventListener("DOMContentLoaded", () =>{
-    phoneBook.init();
-});
