@@ -1,10 +1,36 @@
-window.onload = function(){
+const phoneBook = {
 
-    let quickAddBtn = document.getElementById("QuickAdd");
+    contacts:[],
 
-    let addBtn = document.getElementById("Add");
+    init(){
 
-    let cancelBtn = document.getElementById("Cancel");
+        const storedContacts = localStorage.getItem("myContacts");
 
-    let quickAddFormDiv
+        if(storedContacts){
+            this.contacts = JSON.parse(storedContacts);
+        
+        }
+
+        this.render();
+    },
+
+    saveToStorage(){
+
+        localStorage.setItem("myContacts", JSON.stringify(this.contacts));
+
+    },
+
+    addContact(name,phone) {
+
+        const newContact = {
+            id: Date.now().toString(),
+            name:name,
+            phone:phone
+        };
+
+        this.contacts.push(newContact);
+        this.saveToStorage();
+        this.render();
+    }
+
 }
