@@ -14,7 +14,7 @@ function displayContacts() {
     tfoot.innerHTML = "";
 
     if( addressBook.length === 0){
-            tfoot.innerHTML = `<tr>
+            tbody.innerHTML = `<tr>
                 <td colspan="6" style = "text-align:center; color:#999;">No contacts saved yet.</td>
             </tr>`;
 
@@ -24,6 +24,7 @@ function displayContacts() {
         addressBook.forEach(contact =>{
 
             const tr = document.createElement('tr');
+
             tr.innerHTML =`
             <td>${contact.fullName}</td>
             <td>${contact.phoneNumber}</td>
@@ -35,7 +36,7 @@ function displayContacts() {
             </td>
             `;
 
-            tfoot.appendChild(tr);
+            tbody.appendChild(tr);
 
         });
             `
