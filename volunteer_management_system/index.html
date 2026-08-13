@@ -81,8 +81,8 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">🏢</div>
-                    <h3>Organization</h3>
-                    <p>Create and manage opportunities for volunteers.</p>
+                    <h3>Admin</h3>
+                    <p>Create and manage events for volunteers.</p>
                 </div>
 
                 <div class="feature-card">
@@ -99,7 +99,7 @@
 
         <h1>Volunteer Opportunities</h1>
 
-        <p>Find an opportunity where your skills can make a difference.</p>
+        <p>Find an event where your skills can make a difference.</p>
       </div>
 
       <div class="search-area">
@@ -142,15 +142,15 @@
           <h2>For Volunteers</h2>
 
           <p>
-            Volunteers can register, create a profile, search for opportunities,
+            Volunteers can register, create and view their profile, search for opportunities,
             apply for them and monitor their applications.
           </p>
 
-          <h2>For Organizations</h2>
+          <h2>For Admin</h2>
 
           <p>
             Organizations can create volunteer opportunities, manage them and
-            review applications submitted by volunteers.
+            review applications submitted by volunteers ,assign to activities and track volunteer participation.
           </p>
 
           <h2>Technologies</h2>
@@ -165,8 +165,7 @@
       </div>
     </section>
 
-    <!-- ================= VOLUNTEER DASHBOARD ================= -->
-
+    
     <section id="volunteerDashboard" class="section dashboard">
       <div class="dashboard-header">
         <div>
@@ -174,7 +173,7 @@
           <h1>Welcome, <span id="volunteerName"></span> 👋</h1>
         </div>
 
-        <button class="secondary-btn" onclick="logout()">Logout</button>
+        <button class="secondary-btn" onclick="logout()">LogOut</button>
       </div>
 
       <div class="stats-grid">
@@ -198,7 +197,7 @@
       </div>
 
       <div class="dashboard-grid">
-        <!-- PROFILE -->
+        
 
         <div class="dashboard-card">
           <div class="card-header">
@@ -210,7 +209,7 @@
           <div id="profileInfo"></div>
         </div>
 
-        <!-- APPLICATIONS -->
+      
 
         <div class="dashboard-card">
           <div class="card-header">
@@ -226,7 +225,7 @@
     <section id="organizationDashboard" class="section dashboard">
       <div class="dashboard-header">
         <div>
-          <p>ORGANIZATION AREA</p>
+          <p>ADMIN AREA</p>
           <h1>Welcome, <span id="organizationName"></span> 🏢</h1>
         </div>
 
@@ -270,9 +269,82 @@
           <h2>Volunteer Applications</h2>
         </div>
 
-        <div id="organizationApplications"></div>
+        <div id="AdminApplications"></div>
       </div>
+
     </section>
+      
+      <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('registerModal')">
+          ×
+        </button>
+
+        <h2>Create Account</h2>
+
+        <p>Join our volunteer community</p>
+
+        <form onsubmit="register(event)">
+          <label>Full Name </label>
+
+          <input
+            type="text"
+            id="registerName"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label>Email</label>
+
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label>Password</label>
+
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Create a password"
+            minlength="4"
+            required
+          />
+
+          <label>Account Type</label>
+
+          <select id="registerType" onchange="toggleSkills()" required>
+            <option value="volunteer">Volunteer</option>
+
+            <option value="organization">Admin</option>
+          </select>
+
+          <div id="skillsBox">
+            <label>Skills</label>
+
+            <input
+              type="text"
+              id="registerSkills"
+              placeholder="Example: Teaching, IT, Health"
+            />
+          </div>
+
+          <button class="primary-btn full-btn" type="submit">
+            Create Account
+          </button>
+        </form>
+
+        <p class="switch-text">
+          Already have an account?
+
+          <button onclick="switchToLogin()">Login</button>
+        </p>
+      </div>
+    </div>
+
+    
 
     <script src="volunteer.js"></script>
 </body>
