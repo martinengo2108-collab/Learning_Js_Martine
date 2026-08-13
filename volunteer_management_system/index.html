@@ -2,408 +2,396 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Management System</title>
-    <link rel="stylesheet" href="volunteer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Management System</title>
+  <link rel="stylesheet" href="volunteer.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Volunteer <span>Mboa</span></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Volunteer <span>Mboa</span></div>
 
-            <div class="nav-links">
-                <button onclick="showSection('home')">Home</button>
-                <button onclick="showSection('opportunities')">Opportunities</button>
-                <button onclick="showSection('about')">About</button>
-                <button id="loginNav" onclick="openModal('loginModal')">Login</button>
-                <button id="registerNav" class="nav-register" onclick="openModal('registerModal')">
-                    Register
-                </button>
+      <div class="nav-links">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('opportunities')">Opportunities</button>
+        <button onclick="showSection('about')">About</button>
+        <button id="loginNav" onclick="openModal('loginModal')">Login</button>
+        <button id="registerNav" class="nav-register" onclick="openModal('registerModal')">
+          Register
+        </button>
 
-                <button id="logoutNav" onclick="logout()" style="display: none">
-                    LogOut
-                </button>
-            </div>
-        </nav>
+        <button id="logoutNav" onclick="logout()" style="display: none">
+          LogOut
+        </button>
+      </div>
+    </nav>
 
-    </header>
+  </header>
 
-    <main id="hone" class="section active">
-        <section class="hero">
-            <div class="hero-text">
-                <p class="small-title">VOLUNTEER MANAGEMENT SYSTEM</p>
+  <main id="hone" class="section active">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="small-title">VOLUNTEER MANAGEMENT SYSTEM</p>
 
-                <h1>
-                    Make a difference.
-                    <span>Volunteer today.</span>
-                </h1>
+        <h1>
+          Make a difference.
+          <span>Volunteer today.</span>
+        </h1>
 
-                <p>
-                    Connect passionate volunteers with organizations and meaningful
-                    community opportunities.
-                </p>
+        <p>
+          Connect passionate volunteers with organizations and meaningful
+          community opportunities.
+        </p>
 
-                <div class="hero-buttons">
-                    <button class="primary-btn" onclick="showSection('opportunities')">
-                        Find Opportunities
-                    </button>
+        <div class="hero-buttons">
+          <button class="primary-btn" onclick="showSection('opportunities')">
+            Find Opportunities
+          </button>
 
-                    <button class="secondary-btn" onclick="openModal('registerModal')">
-                        Join Us
-                    </button>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-icon">🎗</div>
-
-                <h2>VolunteerMboa</h2>
-
-                <p>Connecting people, organizations and communities.</p>
-            </div>
-        </section>
-
-
-        <section class="features">
-            <div class="section-title">
-                <p>OUR SERVICES</p>
-                <h2>How the system works</h2>
-            </div>
-
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👤</div>
-                    <h3>Volunteer</h3>
-                    <p>Create your profile and discover more opportunities.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🏢</div>
-                    <h3>Admin</h3>
-                    <p>Create and manage events for volunteers.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h3>Applications</h3>
-                    <p>Apply for opportunities and track your application status.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <section id="opportunities" class="section">
-        <div class="page-header">
-        <p>DISCOVER</p>
-
-        <h1>Volunteer Opportunities</h1>
-
-        <p>Find an event where your skills can make a difference.</p>
+          <button class="secondary-btn" onclick="openModal('registerModal')">
+            Join Us
+          </button>
+        </div>
       </div>
 
-      <div class="search-area">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="🔎 Search opportunities..."
-          oninput="displayOpportunities()"
-        />
+      <div class="hero-card">
+        <div class="hero-icon">🎗</div>
 
-        <select id="categoryFilter" onchange="displayOpportunities()">
-          <option value="all">All Categories</option>
+        <h2>VolunteerMboa</h2>
+
+        <p>Connecting people, organizations and communities.</p>
+      </div>
+    </section>
+
+
+    <section class="features">
+      <div class="section-title">
+        <p>OUR SERVICES</p>
+        <h2>How the system works</h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👤</div>
+          <h3>Volunteer</h3>
+          <p>Create your profile and discover more opportunities.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏢</div>
+          <h3>Admin</h3>
+          <p>Create and manage events for volunteers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Applications</h3>
+          <p>Apply for opportunities and track your application status.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section id="opportunities" class="section">
+    <div class="page-header">
+      <p>DISCOVER</p>
+
+      <h1>Volunteer Opportunities</h1>
+
+      <p>Find an event where your skills can make a difference.</p>
+    </div>
+
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="🔎 Search opportunities..." oninput="displayOpportunities()" />
+
+      <select id="categoryFilter" onchange="displayOpportunities()">
+        <option value="all">All Categories</option>
+        <option value="Community">Community</option>
+        <option value="Education">Education</option>
+        <option value="Environment">Environment</option>
+        <option value="Health">Health</option>
+        <option value="Technology">Technology</option>
+      </select>
+    </div>
+
+    <div id="opportunityList" class="opportunity-grid"></div>
+  </section>
+  <section id="about" class="section">
+    <div class="about-container">
+      <div class="page-header">
+        <p>ABOUT THE PROJECT</p>
+
+        <h1>Volunteer Management System</h1>
+      </div>
+
+      <div class="about-box">
+        <h2>Our objective</h2>
+
+        <p>
+          The objective of this system is to connect volunteers with
+          organizations that need help for different community activities and
+          projects.
+        </p>
+
+        <h2>For Volunteers</h2>
+
+        <p>
+          Volunteers can register, create and view their profile, search for opportunities,
+          apply for them and monitor their applications.
+        </p>
+
+        <h2>For Admin</h2>
+
+        <p>
+          Organizations can create volunteer opportunities, manage them and
+          review applications submitted by volunteers ,assign to activities and track volunteer participation.
+        </p>
+
+        <h2>Technologies</h2>
+
+        <div class="tech-list">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>LocalStorage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="volunteerDashboard" class="section dashboard">
+    <div class="dashboard-header">
+      <div>
+        <p>VOLUNTEER AREA</p>
+        <h1>Welcome, <span id="volunteerName"></span> 👋</h1>
+      </div>
+
+      <button class="secondary-btn" onclick="logout()">LogOut</button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <h3 id="myApplicationCount">0</h3>
+        <p>My Applications</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🔎</div>
+        <h3 id="availableCount">0</h3>
+        <p>Available Opportunities</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <h3 id="approvedCount">0</h3>
+        <p>Approved</p>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+
+
+      <div class="dashboard-card">
+        <div class="card-header">
+          <h2>My Profile</h2>
+
+          <button onclick="editProfile()">✏️ Edit</button>
+        </div>
+
+        <div id="profileInfo"></div>
+      </div>
+
+
+
+      <div class="dashboard-card">
+        <div class="card-header">
+          <h2>My Applications</h2>
+        </div>
+
+        <div id="myApplications"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="organizationDashboard" class="section dashboard">
+    <div class="dashboard-header">
+      <div>
+        <p>ADMIN AREA</p>
+        <h1>Welcome, <span id="organizationName"></span> 🏢</h1>
+      </div>
+
+      <button class="primary-btn" onclick="openOpportunityForm()">
+        + Create Opportunity
+      </button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📌</div>
+        <h3 id="organizationOpportunityCount">0</h3>
+        <p>My Opportunities</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <h3 id="organizationApplicationCount">0</h3>
+        <p>Applications</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⏳</div>
+        <h3 id="pendingApplicationCount">0</h3>
+        <p>Pending</p>
+      </div>
+    </div>
+
+
+    <div class="dashboard-card">
+      <div class="card-header">
+        <h2>My Opportunities</h2>
+      </div>
+
+      <div id="organizationOpportunities"></div>
+    </div>
+
+
+    <div class="dashboard-card">
+      <div class="card-header">
+        <h2>Volunteer Applications</h2>
+      </div>
+
+      <div id="AdminApplications"></div>
+    </div>
+
+  </section>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('registerModal')">
+        ×
+      </button>
+
+      <h2>Create Account</h2>
+
+      <p>Join our volunteer community</p>
+
+      <form onsubmit="register(event)">
+        <label>Full Name </label>
+
+        <input type="text" id="registerName" placeholder="Enter your name" required />
+
+        <label>Email</label>
+
+        <input type="email" id="registerEmail" placeholder="Enter your email" required />
+
+        <label>Password</label>
+
+        <input type="password" id="registerPassword" placeholder="Create a password" minlength="4" required />
+
+        <label>Account Type</label>
+
+        <select id="registerType" onchange="toggleSkills()" required>
+          <option value="volunteer">Volunteer</option>
+
+          <option value="organization">Admin</option>
+        </select>
+
+        <div id="skillsBox">
+          <label>Skills</label>
+
+          <input type="text" id="registerSkills" placeholder="Example: Teaching, IT, Health" />
+        </div>
+
+        <button class="primary-btn full-btn" type="submit">
+          Create Account
+        </button>
+      </form>
+
+      <p class="switch-text">
+        Already have an account?
+
+        <button onclick="switchToLogin()">Login</button>
+      </p>
+    </div>
+  </div>
+  <div id="opportunityModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('opportunityModal')">
+        ×
+      </button>
+
+      <h2 id="opportunityFormTitle">Create Opportunity</h2>
+
+      <form onsubmit="saveOpportunity(event)">
+        <input type="hidden" id="editOpportunityId" />
+
+        <label>Event Name</label>
+
+        <input type="text" id="opportunityName" placeholder="Example: Community Clean-up" required />
+
+        <label>Category</label>
+
+        <select id="opportunityCategory" required>
           <option value="Community">Community</option>
           <option value="Education">Education</option>
           <option value="Environment">Environment</option>
           <option value="Health">Health</option>
           <option value="Technology">Technology</option>
         </select>
-      </div>
 
-      <div id="opportunityList" class="opportunity-grid"></div>
-    </section>
-    <section id="about" class="section">
-      <div class="about-container">
-        <div class="page-header">
-          <p>ABOUT THE PROJECT</p>
+        <label>Location</label>
 
-          <h1>Volunteer Management System</h1>
-        </div>
+        <input type="text" id="opportunityLocation" placeholder="Enter your location" required />
 
-        <div class="about-box">
-          <h2>Our objective</h2>
+        <label>Date</label>
 
-          <p>
-            The objective of this system is to connect volunteers with
-            organizations that need help for different community activities and
-            projects.
-          </p>
+        <input type="date" id="opportunityDate" required />
 
-          <h2>For Volunteers</h2>
+        <label>Description</label>
 
-          <p>
-            Volunteers can register, create and view their profile, search for opportunities,
-            apply for them and monitor their applications.
-          </p>
+        <textarea id="opportunityDescription" placeholder="Describe the volunteer activity..." required></textarea>
 
-          <h2>For Admin</h2>
-
-          <p>
-            Organizations can create volunteer opportunities, manage them and
-            review applications submitted by volunteers ,assign to activities and track volunteer participation.
-          </p>
-
-          <h2>Technologies</h2>
-
-          <div class="tech-list">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>LocalStorage</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="volunteerDashboard" class="section dashboard">
-      <div class="dashboard-header">
-        <div>
-          <p>VOLUNTEER AREA</p>
-          <h1>Welcome, <span id="volunteerName"></span> 👋</h1>
-        </div>
-
-        <button class="secondary-btn" onclick="logout()">LogOut</button>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon">📋</div>
-          <h3 id="myApplicationCount">0</h3>
-          <p>My Applications</p>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon">🔎</div>
-          <h3 id="availableCount">0</h3>
-          <p>Available Opportunities</p>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon">✅</div>
-          <h3 id="approvedCount">0</h3>
-          <p>Approved</p>
-        </div>
-      </div>
-
-      <div class="dashboard-grid">
-        
-
-        <div class="dashboard-card">
-          <div class="card-header">
-            <h2>My Profile</h2>
-
-            <button onclick="editProfile()">✏️ Edit</button>
-          </div>
-
-          <div id="profileInfo"></div>
-        </div>
-
-      
-
-        <div class="dashboard-card">
-          <div class="card-header">
-            <h2>My Applications</h2>
-          </div>
-
-          <div id="myApplications"></div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="organizationDashboard" class="section dashboard">
-      <div class="dashboard-header">
-        <div>
-          <p>ADMIN AREA</p>
-          <h1>Welcome, <span id="organizationName"></span> 🏢</h1>
-        </div>
-
-        <button class="primary-btn" onclick="openOpportunityForm()">
-          + Create Opportunity
+        <button class="primary-btn full-btn" type="submit">
+          Save Event
         </button>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon">📌</div>
-          <h3 id="organizationOpportunityCount">0</h3>
-          <p>My Opportunities</p>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon">📋</div>
-          <h3 id="organizationApplicationCount">0</h3>
-          <p>Applications</p>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon">⏳</div>
-          <h3 id="pendingApplicationCount">0</h3>
-          <p>Pending</p>
-        </div>
-      </div>
-
-
-      <div class="dashboard-card">
-        <div class="card-header">
-          <h2>My Opportunities</h2>
-        </div>
-
-        <div id="organizationOpportunities"></div>
-      </div>
-
-
-      <div class="dashboard-card">
-        <div class="card-header">
-          <h2>Volunteer Applications</h2>
-        </div>
-
-        <div id="AdminApplications"></div>
-      </div>
-
-    </section>
-      
-      <div id="registerModal" class="modal">
-      <div class="modal-content">
-        <button class="close-btn" onclick="closeModal('registerModal')">
-          ×
-        </button>
-
-        <h2>Create Account</h2>
-
-        <p>Join our volunteer community</p>
-
-        <form onsubmit="register(event)">
-          <label>Full Name </label>
-
-          <input
-            type="text"
-            id="registerName"
-            placeholder="Enter your name"
-            required
-          />
-
-          <label>Email</label>
-
-          <input
-            type="email"
-            id="registerEmail"
-            placeholder="Enter your email"
-            required
-          />
-
-          <label>Password</label>
-
-          <input
-            type="password"
-            id="registerPassword"
-            placeholder="Create a password"
-            minlength="4"
-            required
-          />
-
-          <label>Account Type</label>
-
-          <select id="registerType" onchange="toggleSkills()" required>
-            <option value="volunteer">Volunteer</option>
-
-            <option value="organization">Admin</option>
-          </select>
-
-          <div id="skillsBox">
-            <label>Skills</label>
-
-            <input
-              type="text"
-              id="registerSkills"
-              placeholder="Example: Teaching, IT, Health"
-            />
-          </div>
-
-          <button class="primary-btn full-btn" type="submit">
-            Create Account
-          </button>
-        </form>
-
-        <p class="switch-text">
-          Already have an account?
-
-          <button onclick="switchToLogin()">Login</button>
-        </p>
-      </div>
+      </form>
     </div>
-     <div id="opportunityModal" class="modal">
-      <div class="modal-content">
-        <button class="close-btn" onclick="closeModal('opportunityModal')">
-          ×
+  </div>
+
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('profileModal')">
+        ×
+      </button>
+
+      <h2>Edit Profile</h2>
+
+      <form onsubmit="saveProfile(event)">
+        <label>Name</label>
+
+        <input type="text" id="editName" required />
+
+        <label>Email</label>
+
+        <input type="email" id="editEmail" required />
+
+        <label>Skills</label>
+
+        <input type="text" id="editSkills" />
+
+        <button class="primary-btn full-btn" type="submit">
+          Save Profile
         </button>
-
-        <h2 id="opportunityFormTitle">Create Opportunity</h2>
-
-        <form onsubmit="saveOpportunity(event)">
-          <input type="hidden" id="editOpportunityId" />
-
-          <label>Event Name</label>
-
-          <input
-            type="text"
-            id="opportunityName"
-            placeholder="Example: Community Clean-up"
-            required
-          />
-
-          <label>Category</label>
-
-          <select id="opportunityCategory" required>
-            <option value="Community">Community</option>
-            <option value="Education">Education</option>
-            <option value="Environment">Environment</option>
-            <option value="Health">Health</option>
-            <option value="Technology">Technology</option>
-          </select>
-
-          <label>Location</label>
-
-          <input
-            type="text"
-            id="opportunityLocation"
-            placeholder="Enter your location"
-            required
-          />
-
-          <label>Date</label>
-
-          <input type="date" id="opportunityDate" required />
-
-          <label>Description</label>
-
-          <textarea
-            id="opportunityDescription"
-            placeholder="Describe the volunteer activity..."
-            required
-          ></textarea>
-
-          <button class="primary-btn full-btn" type="submit">
-            Save Event
-          </button>
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
-    
 
-    <script src="volunteer.js"></script>
+  <script src="volunteer.js"></script>
 </body>
 
 </html>
