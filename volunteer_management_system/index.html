@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Management System</title>
     <link rel="stylesheet" href="volunteer.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="logo">Volunteer <span>Mboa</span></div>
+
+            <div class="nav-links">
+                <button onclick="showSection('home')">Home</button>
+                <button onclick="showSection('opportunities')">Opportunities</button>
+                <button onclick="showSection('about')">About</button>
+                <button id="loginNav" onclick="openModal('loginModal')">Login</button>
+                <button id="registerNav" class="nav-register" onclick="openModal('registerModal')">
+                    Register
+                </button>
+
+                <button id="logoutNav" onclick="logout()" style="display: none">
+                    LogOut
+                </button>
+            </div>
+        </nav>
+
+    </header>
 </body>
+
 </html>
