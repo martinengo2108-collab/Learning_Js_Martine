@@ -64,7 +64,7 @@
                 <p>Connecting people, organizations and communities.</p>
             </div>
         </section>
-        
+
 
         <section class="features">
             <div class="section-title">
@@ -93,6 +93,36 @@
             </div>
         </section>
     </main>
+    <section id="opportunities" class="section">
+        <div class="page-header">
+        <p>DISCOVER</p>
+
+        <h1>Volunteer Opportunities</h1>
+
+        <p>Find an opportunity where your skills can make a difference.</p>
+      </div>
+
+      <div class="search-area">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔎 Search opportunities..."
+          oninput="displayOpportunities()"
+        />
+
+        <select id="categoryFilter" onchange="displayOpportunities()">
+          <option value="all">All Categories</option>
+          <option value="Community">Community</option>
+          <option value="Education">Education</option>
+          <option value="Environment">Environment</option>
+          <option value="Health">Health</option>
+          <option value="Technology">Technology</option>
+        </select>
+      </div>
+
+      <div id="opportunityList" class="opportunity-grid"></div>
+    </section>
+    </section>
 
     <script src="volunteer.js"></script>
 </body>
