@@ -60,6 +60,15 @@ input,button,textarea,select{
         scroll-behavior: auto !important;
     }
 }
+.flex{
+    display: flex; 
+    gap: var(--gap,1rem);    
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap,1rem);
+}
 h1,h2,h3,h4,h5,h6,p{
    
     font-weight:400;
