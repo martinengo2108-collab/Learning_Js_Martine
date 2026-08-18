@@ -130,7 +130,7 @@ select {
     max-width:50ch;
 }
 .grid-container *:first-child {
-    outline: 1px solid red;
+    grid-column: 2;
 }
 
 .grid-container *:last-child {
@@ -367,4 +367,14 @@ body {
 .home{
     background-image:url(./assets/home/background-home-mobile.jpg);
    
+}
+@media(min-width: 35em) {
+    .home{
+        background-image:url(./assets/home/background-home-tablet.jpg);
+    }
+}
+@media(min-width: 45em) {
+    .home{
+        background-image:url(./assets/home/background-home-desktop.jpg);
+    }
 }
