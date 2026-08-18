@@ -22,36 +22,32 @@ body {
     --clr-white: hsl(0, 0%, 100%);
     --clr-light: hsl(231, 77%, 90%);
     --clr-dark: hsl(230, 35%, 7%);
-    --fs-900: 9.375rem;
-    --fs-800: 6.75rem;
-    --fs-700: 3.75rem;
-    --fs-600: 2rem;
+    --fs-900: 5rem;
+    --fs-800: 3.75rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.125rem;
+    --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.9rem;
 
 }
 @media(min-width: 35em) {
     :root {
-        --fs-800: 6.75rem;
-        --fs-700: 4.5rem;
-        --fs-600: 2.5rem;
-        --fs-500: 1.75rem;
-        --fs-400: 1.125rem;
+        --fs-900: 9.375rem;
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
 
     }
 }
 @media (min-width: 45rem) {
     :root {
-        --fs-900: 9.375rem;
         --fs-800: 6.75rem;
-        --fs-700: 4.5rem;
-        --fs-600: 2.5rem;
-        --fs-500: 1.75rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
         --fs-400: 1.125rem;
-        --fs-300: 1rem;
-        --fs-200: 0.875rem;
 
     }
 }        
