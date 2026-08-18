@@ -70,6 +70,12 @@ input,button,textarea,select{
     gap: var(--gap,1rem);
 }
 
+.grid-container *:first-child{
+    grid-column: 2;
+}
+.grid-container *:last-child{
+    grid-column: 3;
+}
 .flow >*:where(:not(:first-child)){
     margin-top: var(--flow-space,1rem);
 }
@@ -80,10 +86,9 @@ input,button,textarea,select{
 }
 .grid-container{
     display: grid;
-    grid-template-columns:2em repeat(2, minmax(0,40rem), 1fr) 2em ;
-    place-items: center;
-    min-height: 100vh;
-    padding-inline: 2em;
+    grid-template-columns:minmax(2em, 1fr) repeat(2, minmax(0,40rem)), minmax(2em, 1fr);
+    column-gap: var(--container-gap,2rem);
+
 }
 sr-only{
     position: absolute;
