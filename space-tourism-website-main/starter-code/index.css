@@ -22,32 +22,29 @@ body {
     --clr-white: hsl(0, 0%, 100%);
     --clr-light: hsl(231, 77%, 90%);
     --clr-dark: hsl(230, 35%, 7%);
-    --fs-900:clamp(5rem, 7vw+1rem, 9.375rem);
-    --fs-800: 3.75rem;
-    --fs-700: 1.5rem;
-    --fs-600: 1rem;
+    --fs-900: 9.375rem;
+    --fs-800: 6.75rem;
+    --fs-700: 3.75rem;
+    --fs-600: 2rem;
     --fs-500: 1.75rem;
-    --fs-400: 0.9375rem;
+    --fs-400: 1.125rem;
     --fs-300: 1rem;
     --fs-200: 0.9rem;
 
 }
 @media(min-width: 35em) {
     :root {
-        --fs-800: 5rem;
-        --fs-700: 2.5rem;
-        --fs-600: 1.5rem;
-        --fs-400: 1rem;
-
-    }
+        --fs-800: 6.75rem;
+        --fs-700: 4.5rem;
+        --fs-600: 2.5rem;
+        --fs-400: 1.125rem;    }
 }
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
     :root {
         --fs-800: 6.75rem;
-        --fs-700: 3.5rem;
-        --fs-600: 2rem;
+        --fs-700: 4.5rem;
+        --fs-600: 2.5rem;
         --fs-400: 1.125rem;
-
     }
 }        
 *::before,
@@ -106,6 +103,9 @@ select {
     gap: var(--gap, 1rem);
 }
 
+d-block{
+    display: block;
+}
 
 .flow>*:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
@@ -348,3 +348,4 @@ p {
 .dot-indicator [aria-selected="true"] {
     background-color: hsl(var(--clr-white)/1);
 }
+
