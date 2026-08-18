@@ -97,6 +97,10 @@ select {
     display: flex;
     gap: var(--gap, 1rem);
 }
+.flex.even-columns *{
+    width: 100%;
+    outline: 1px solid red;
+}
 
 .grid {
     display: grid;
