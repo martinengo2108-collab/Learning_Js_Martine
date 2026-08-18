@@ -26,6 +26,13 @@
     --fs-200: 0.9rem;
 
 }
+
+*::before,
+*::after{
+    box-sizing: border-box;
+
+
+}
 .large-button {
     position: relative;
     border-radius: 50%;
