@@ -124,7 +124,7 @@ select {
     display: grid;
     place-items: center;
     border: 5px solid;
-    row-gap:10%;
+    padding-inline:  1rem;;
 }
 .grid-container * {
     max-width:50ch;
@@ -151,6 +151,10 @@ select {
 
     .grid-container *:last-child {
         grid-column: 3;
+    }
+    .grid-container--home{
+        padding-bottom: max(6rem,20vh);
+        align-items: end;
     }
 
 }
@@ -356,4 +360,11 @@ p {
 .dot-indicator [aria-selected="true"] {
     background-color: hsl(var(--clr-white)/1);
 }
-
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+.home{
+    background-image:url(./assets/home/background-home-mobile.jpg);
+   
+}
