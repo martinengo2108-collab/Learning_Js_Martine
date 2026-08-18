@@ -12,10 +12,13 @@
 :root{
     --ff-sans-cond: 'Barlow Condensed', sans-serif;
     --ff-serif: 'Bellefair', serif;
+    --ff-sans-normmal: 'Barlow', sans-serif;
     --clr-white: hsl(0, 0%, 100%);
     --clr-light: hsl(231, 77%, 90%);
     --clr-dark: hsl(230, 35%, 7%);
-    --clr-accent: hsl(240, 100%, 50%);
+
+    
+
 }
 .large-button {
     position: relative;
