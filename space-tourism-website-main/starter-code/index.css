@@ -6,10 +6,10 @@
 :root {
     --ff-sans-cond: 'Barlow Condensed', sans-serif;
     --ff-serif: 'Bellefair', serif;
-    --ff-sans-normmal: 'Barlow', sans-serif;
-    --clr-white: hsl(0, 0%, 100%);
-    --clr-light: hsl(231, 77%, 90%);
-    --clr-dark: hsl(230, 35%, 7%);
+    --ff-sans-normal: 'Barlow', sans-serif;
+    --clr-white: 0, 0%, 100%;
+    --clr-light: 231, 77%, 90%;
+    --clr-dark: 230, 35%, 7%;
     --fs-900: 9.375rem;
     --fs-800: 6.75rem;
     --fs-700: 3.75rem;
@@ -29,6 +29,7 @@
 }
 @media (min-width: 45em) {
     :root {
+        --fs-900:9.375rem
         --fs-800: 6.75rem;
         --fs-700: 4.5rem;
         --fs-600: 2.5rem;
@@ -142,7 +143,7 @@ select {
 
         text-align:left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 50rem)), minmax(2rem, 1fr);
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 50rem)) minmax(2rem, 1fr);
     }
 
     .grid-container *:first-child {
@@ -159,7 +160,7 @@ select {
 
 }
 
-sr-only {
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -283,7 +284,7 @@ p {
     display: inline-grid;
     place-items: center;
     text-decoration: none;
-    aspect-ratio: none;
+    aspect-ratio: 1;
 }
 
 .large-button::after {
@@ -305,11 +306,16 @@ p {
 }
 
 .primary-navigation {
-    --gap: 8rem;
     --underlined-gap: 2rem;
     list-style: none;
-    padding: 0;
+    position:fixed;
+    inset:0 0 0 20%;
+    z-index:1000;
+    background:black;
+
+    padding: min(6rem,20vh) 2rem;
     margin: 0;
+    flex-direction:column;
 }
 
 .primary-navigation a {
@@ -370,6 +376,7 @@ body {
 }
 @media(min-width: 35em) {
     .home{
+        background-position:center center;
         background-image:url(./assets/home/background-home-tablet.jpg);
     }
 }
