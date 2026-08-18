@@ -4,7 +4,14 @@
     box-sizing: border-box;
 }
 
-
+body{
+    font-family: var(--ff-sans-normmal);
+    font-size: var(--fs-400);
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
+    line-height: 1.5;
+    min-height: 100vh;
+}
 :root{
     --ff-sans-cond: 'Barlow Condensed', sans-serif;
     --ff-serif: 'Bellefair', serif;
@@ -32,7 +39,12 @@
 body,h1,h2,h3,h4,h5,figure,p,picture{
     margin: 0;
     
-    
+
+}
+
+h1,h2,h3,h4,h5,h6,p{
+   
+    font-weight:400;
 }
 .large-button {
     position: relative;
