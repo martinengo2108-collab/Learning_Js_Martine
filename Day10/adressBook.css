@@ -71,3 +71,21 @@ body{
     border-radius: 6px;
     background: #fff;
 }
+
+.quickAddForm input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(184, 134, 47, 0.2);
+}
+
+.btn-add,
+#btn-cancel {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 16px;
+    margin-right: 10px;
+}
