@@ -142,3 +142,31 @@ body{
 .table tbody tr:hover {
     background-color: #faf8f3;
 }
+
+.btn-delete {
+    background-color: transparent;
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: var(--color-danger);
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    padding: 16px 0;
+    font-size: 0.75rem;
+    color: var(--color-text-soft);
+    border-top: 1px solid var(--color-border);
+}
+@media (max-width: 600px) {
+    .quickAddForm {
+        grid-template-columns: 1fr;
+    }
+}
