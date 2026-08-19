@@ -1,5 +1,5 @@
 
-let addressBook = [];
+let addressBook = JSON.parse(localStorage.getItem('addressBook')) || [];
 
 const contactForm = document.getElementById('contactForm');
 const fullNameInput = document.getElementById('fullName');
@@ -42,6 +42,9 @@ function displayContacts() {
             
     
 }
+
+displayContacts();
+
 contactForm.addEventListener("submit",(e) => {
     
     e.preventDefault();
@@ -57,7 +60,7 @@ contactForm.addEventListener("submit",(e) => {
     };
 
     addressBook.push(newContact);
-
+    s
     contactForm.reset();
 
     displayContacts();
