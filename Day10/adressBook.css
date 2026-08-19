@@ -108,3 +108,13 @@ body{
 #btn-cancel:hover {
     background-color: rgba(163, 59, 43, 0.08);
 }
+
+
+.contact-list {
+    padding: 24px 30px;
+}
+
+.contact-list h2 {
+    font-size: 1.2rem;
+    margin: 0 0 16px;
+}
