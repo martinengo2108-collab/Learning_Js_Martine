@@ -132,18 +132,19 @@ select {
 }
 
 .grid-container--home{
-    min-height: 100vh ;
+    min-height: calc(100vh - 7rem);
 }
 .primary-navigation {
     --underlined-gap: 2rem;
     list-style: none;
     padding:0;
     margin:0;
-    background: hsl(var(--clr-white)/0.1);
+    background: hsl(var(--clr-dark)/0.1);
     -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
 
 }
+
 
 .primary-navigation a {
     text-decoration: none;
@@ -385,7 +386,6 @@ body {
 }
 @media(min-width: 35em) {
     .home{
-        background-position:center center;
         background-image:url(./assets/home/background-home-tablet.jpg);
     }
     
