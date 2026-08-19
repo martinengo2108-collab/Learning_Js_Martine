@@ -7,11 +7,11 @@ const phoneNumberInput = document.getElementById('phoneNumber');
 const addressInput = document.getElementById('address');
 const cityInput = document.getElementById('city');
 const emailInput = document.getElementById('email');
-const contactRows = document.getElementById('contactRows');
+const tbody = document.getElementById('contactRows');
 const btnCancel = document.getElementById('btnCancel');
 
 function displayContacts() {
-    tfoot.innerHTML = "";
+    tbody.innerHTML = "";
 
     if( addressBook.length === 0){
             tbody.innerHTML = `<tr>
@@ -32,14 +32,14 @@ function displayContacts() {
             <td>${contact.city}</td>
             <td>${contact.email}</td>
             <td>
-                <button class ="btn-delete" onclick = "deleteContact("${contact.id}">Delete</button>
+                <button class ="btn-delete" onclick = "deleteContact(${contact.id})">Delete</button>
             </td>
             `;
 
             tbody.appendChild(tr);
 
         });
-            `
+            
     
 }
 contactForm.addEventListener("submit",(e) => {
@@ -77,4 +77,5 @@ function deleteContact(id){
         contactForm.reset();
         })
     };
+
 
