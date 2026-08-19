@@ -118,3 +118,19 @@ body{
     font-size: 1.2rem;
     margin: 0 0 16px;
 }
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table thead th {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-text-soft);
+    border-bottom: 2px solid var(--color-accent);
+}
