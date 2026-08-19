@@ -7,9 +7,9 @@
     --ff-sans-cond: 'Barlow Condensed', sans-serif;
     --ff-serif: 'Bellefair', serif;
     --ff-sans-normal: 'Barlow', sans-serif;
-    --clr-white: 0, 0%, 100%;
-    --clr-light: 231, 77%, 90%;
-    --clr-dark: 230, 35%, 7%;
+    --clr-white: 0 0% 100%;
+    --clr-light: 231 77% 90%;
+    --clr-dark: 230 35% 7%;
     --fs-900: 5rem;
     --fs-800: 3.5rem;
     --fs-700: 2.5rem;
@@ -31,7 +31,7 @@
 }
 @media (min-width: 45em) {
     :root {
-        --fs-900:9.375rem
+        --fs-900:9.375rem;
         --fs-800: 6.75rem;
         --fs-700: 4.5rem;
         --fs-600: 2.5rem;
@@ -131,13 +131,14 @@ select {
 .grid-container * {
     max-width:50ch;
 }
-.grid-container *:first-child {
+.grid-container  > *:first-child {
     grid-column: 2;
 }
 
-.grid-container *:last-child {
+.grid-container > *:last-child {
     grid-column: 3;
 }
+
 
 @media (min-width: 45em) {
     .grid-container {
@@ -309,14 +310,8 @@ p {
 .primary-navigation {
     --underlined-gap: 2rem;
     list-style: none;
-    position:fixed;
-    inset:0 0 0 20%;
-    z-index:1000;
-    background:black;
-
-    padding: min(6rem,20vh) 2rem;
-    margin: 0;
-    flex-direction:column;
+    padding:0;
+    margin:0;
 }
 
 .primary-navigation a {
@@ -324,20 +319,20 @@ p {
 
 }
 
-.primary-navigation a span {
+.primary-navigation a > span {
     font-weight: 700;
     margin-right: 0.5em;
 }
 
-.underline-indicators * {
+.underline-indicators > * {
     cursor: pointer;
     padding: var(--underlined-gap, 1rem) 0;
     border: 0;
     border-bottom: 0.2rem solid hsl(var(--clr-white)/0);
 }
 
-.underline-indicators *:hover,
-.underline-indicators *:focus {
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
     border-color: hsl(var(--clr-white)/.5);
 }
 
@@ -351,7 +346,7 @@ p {
     --gap: 2rem;
 }
 
-.dot-indicator * {
+.dot-indicator > * {
     cursor: pointer;
     border-radius: 50%;
     padding: 0.5rem;
@@ -359,12 +354,12 @@ p {
     border: 0;
 }
 
-.dot-indicator *:hover,
-.dot-indicator *:focus {
+.dot-indicator > *:hover,
+.dot-indicator > *:focus {
     background-color: hsl(var(--clr-white)/.5);
 }
 
-.dot-indicator [aria-selected="true"] {
+.dot-indicator > [aria-selected="true"] {
     background-color: hsl(var(--clr-white)/1);
 }
 body {
@@ -380,9 +375,23 @@ body {
         background-position:center center;
         background-image:url(./assets/home/background-home-tablet.jpg);
     }
+    
 }
 @media(min-width: 45em) {
     .home{
         background-image:url(./assets/home/background-home-desktop.jpg);
+    }
+}
+@media(max-width:35rem){
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 20%;
+        z-index: 1000;
+        background: black;
+        padding: min(6rem, 20vh) 2rem;
+        flex-direction: column
+    }
+    .primary-navigation.underlined-indicators > .active{
+        border: 0;
     }
 }
