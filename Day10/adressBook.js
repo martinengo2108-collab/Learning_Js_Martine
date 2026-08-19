@@ -45,6 +45,9 @@ function displayContacts() {
 
 displayContacts();
 
+function saveContacts(){
+    localStorage.setItem('addressBook', JSON.stringify(addressBook));
+}
 contactForm.addEventListener("submit",(e) => {
     
     e.preventDefault();
@@ -60,7 +63,8 @@ contactForm.addEventListener("submit",(e) => {
     };
 
     addressBook.push(newContact);
-    s
+
+    saveContacts();
     contactForm.reset();
 
     displayContacts();
@@ -70,7 +74,7 @@ contactForm.addEventListener("submit",(e) => {
 function deleteContact(id){
 
     addressBook = addressBook.filter(contact => contact.id !== id);
-
+    saveContacts();
     displayContacts();
 
 
