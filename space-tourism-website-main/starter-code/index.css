@@ -370,6 +370,10 @@ p {
     background-color: hsl(var(--clr-white)/.5);
 }
 
+.mobile-nav-toggle{
+    display: none;
+
+}
 .dot-indicator > [aria-selected="true"] {
     background-color: hsl(var(--clr-white)/1);
 }
@@ -403,6 +407,15 @@ body {
        /* background: black;*/
         padding: min(6rem, 15vh) 2rem;
         flex-direction: column
+    }
+
+    .mobile-nav-toggle{
+    display: block;
+    position:absolute;
+    z-index:2000;
+    right:1rem;
+
+    
     }
     .primary-navigation.underline-indicators > .active{
         border: 0;
