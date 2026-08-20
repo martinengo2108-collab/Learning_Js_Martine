@@ -411,7 +411,7 @@ body {
        /* background: black;*/
         padding: min(6rem, 15vh) 2rem;
         flex-direction: column;
-        
+
     }
 
     .mobile-nav-toggle{
@@ -425,6 +425,7 @@ body {
     width:1.5rem;
     border:0;
     background-repeat: no-repeat;
+    aspect-ratio: 1;
 
     
     }
