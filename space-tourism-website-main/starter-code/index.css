@@ -97,6 +97,7 @@ select {
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
+    justify-content:space-between;
 }
 .flex.even-columns *{
     width: 100%;
