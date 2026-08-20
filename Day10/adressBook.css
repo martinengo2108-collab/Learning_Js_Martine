@@ -6,12 +6,12 @@
 }
 
 :root {
-    --color-primary: #1c2b33;   
-    --color-accent: #b8862f;    
-    --color-accent-hover: #d4a54e;
+    --color-primary: #40aee9;   
+    --color-accent:#40aee9 ;    
+    --color-accent-hover: #4ecfd4bb;
     --color-danger: #a33b2b;    
     --color-danger-hover: #c14e3c;
-    --color-bg: #f4f1ea;      
+    --color-bg: #f1f3f3;      
     --color-card: #ffffff;      
     --color-border: #e0d9c8;
     --color-text: #23201b;
@@ -46,7 +46,7 @@ body{
 }
 
 #contactForm {
-    padding: 24px 30px;
+    padding: 20px 25px;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -60,7 +60,7 @@ body{
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-text-soft);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .quickAddForm input {
@@ -70,6 +70,7 @@ body{
     border: 1px solid var(--color-border);
     border-radius: 6px;
     background: #fff;
+    gap: 5px;
 }
 
 .quickAddForm input:focus {
@@ -165,7 +166,7 @@ body{
     color: var(--color-text-soft);
     border-top: 1px solid var(--color-border);
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     .quickAddForm {
         grid-template-columns: 1fr;
     }
