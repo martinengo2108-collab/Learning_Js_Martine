@@ -120,7 +120,7 @@ select {
 
 .container {
     margin-inline: auto;
-    padding-inline: 2em;
+    padding-inline: 1.5rem;
     max-width: 80rem;
 }
 
@@ -166,7 +166,7 @@ select {
     .grid-container {
 
         text-align:left;
-        column-gap: var(--container-gap, 2rem);
+        column-gap: var(--container-gap, 1rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 20rem)) minmax(2rem, 1fr);
     }
 
@@ -177,7 +177,7 @@ select {
     .grid-container > *:last-child {
         grid-column: 3;
     }
-    .grid-container--home{
+    .grid-container.grid-container--home{
         padding-bottom: max(6rem,20vh);
         align-items: end;
     }
@@ -190,7 +190,7 @@ select {
 }
 @media (min-width: 65em) {
     .grid-container {
-        --container-gap: 4rem;
+        --container-gap: 5rem;
     }
 }
 .sr-only {
