@@ -179,7 +179,7 @@ select {
     }
     .grid-container.grid-container--home{
         padding-bottom: max(6rem,20vh);
-        align-items: end;
+        align-content: end;
     }
     .primary-navigation {
         --gap: 3rem;
@@ -439,6 +439,10 @@ body {
     }
      .mobile-nav-toggle[aria-expanded="true"] {
         background-image: url(./assets/shared/icon-close.svg);
+    }
+    .mobile-nav-toggle:focus {
+        outline: 2px solid hsl(var(--clr-white));
+        outline-offset: 3px;
     }
     
 }
