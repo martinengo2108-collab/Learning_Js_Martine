@@ -374,10 +374,10 @@ p {
     background-color: hsl(var(--clr-white)/.5);
 }
 
-.mobile-nav-toggle{
+/*.mobile-nav-toggle{
     display: none;
 
-}
+}*/
 .dot-indicator > [aria-selected="true"] {
     background-color: hsl(var(--clr-white)/1);
 }
