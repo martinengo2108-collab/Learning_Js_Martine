@@ -18,7 +18,7 @@ console.log("      CONSOLE-BASED TASK SCHEDULER      ");
 console.log("========================================");
 
 
-console.log("Useful Commands : 'list' or 'exit'\n");
+console.log("Useful Commands : 'list' , 'paused ', 'resume' or 'exit'\n");
 
 function loadTasks() {
 
@@ -28,39 +28,45 @@ function loadTasks() {
             const fileData = fs.readFileSync(FilePath, 'utf8');
             const savedTasks = JSON.parse(fileData);
 
-            console.log(styleSystem, `[SYSTEM] `)
 
             savedTasks.forEach(task => {
-                const timerId = setInterval(() => {
+
+                let timerId = null;
+                if(task.status === "active") {
+
+                    timerId = setInterval(() => {
 
 
                     const time = new Date().toLocaleDateString();
-                    console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  `);
+                    console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds )`); 
                 }
                     , task.delay * 1000);
-
+            }
 
                 activeTasks.push({
                     name: task.name,
                     delay: task.delay,
+                    status: task.status || "active",
                     timerId: timerId
                 });
 
 
             });
+            if (savedTasks.length > 0) 
+                console.log(styleSystem, `[SYSTEM] ${savedTasks.length} Loaded tasks from the JSON file:`);
+            
 
         } catch (error) {
             console.log("[ERROR] Failed to load JSON file:");
         }
-    } else {
-        console.log(styleSystem, "[SYSTEM] No tasks found in the JSON file.");
-    }
+    } 
 }
 
 function saveTasks() {
     const dataToSave = activeTasks.map(task => ({
         name: task.name,
-        delay: task.delay
+        delay: task.delay,
+        status: task.status
     }));
     fs.writeFileSync(FilePath, JSON.stringify(dataToSave, null, 2), 'utf8');
 }
@@ -69,32 +75,73 @@ function saveTasks() {
 function askFortask() {
     rl.question("Enter task name: ", (taskName) => {
 
-        if (taskName.toLowerCase() === 'list') {
-            console.log("\n ---- ACTIVE TASKS ----");
+        const input = taskName.trim().toLowerCase();
+
+        if (input === 'list') {
+            console.log("\n ---- TASKS STATES ----");
             if (activeTasks.length === 0) console.log("No tasks are currently active.");
 
-            activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
-
+            activeTasks.forEach(t => {
+                const status = t.status === "active" ? "🟢 Active" : "🟡 Paused";
+                console.log(`- ${t.name} (every ${t.delay} seconds) -> [ ${status} ]`);
+            });
             console.log("------------------------\n");
 
             return askFortask();
         }
 
-        if (taskName.toLowerCase() === 'exit') {
-            console.log("\n ---- ACTIVE TASKS ----");
-            if (activeTasks.length === 0) console.log("No tasks ");
-            activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
-            console.log("------------------------\n");
-            return askFortask();
-        }
-
-        if (taskName.toLowerCase() === 'exit') {
+        if (input === 'exit') {
             console.log(styleSystem, "[SYSTEM] Exiting the task scheduler...");
             rl.close();
             process.exit(0);
         }
-        if (taskName.trim() === '') {
-            console.log("Empty task name is not allowed. Please enter a valid task name.   ");
+
+        if (input === 'paused') {
+
+            rl.question("Enter the task name to pause: ", (taskToPause) => {
+                const task = activeTasks.find(t => t.name.toLowerCase() === taskToPause.trim().toLowerCase());
+                if (task) {
+                    if (task.status === "paused") {
+                        console.log(styleWarning, `\n[INFO] "${task.name}" is already paused.`);
+                        
+                    }else { 
+                    clearInterval(task.timerId);
+                    task.timerId = "paused";
+                    saveTasks();
+                    console.log(styleSystem, `[SYSTEM] Task "${task.name}" has been paused.`);
+                } }else {
+                    console.log(styleError, `[ERROR] Task "${taskToPause}" not found.`);
+                }
+                console.log("");
+                 askFortask();
+            });
+        }
+        if (input === 'resume') {
+            rl.question("Enter the task name to resume: ", (taskToResume) => {
+                const task = activeTasks.find(t => t.name.toLowerCase() === taskToResume.trim().toLowerCase());
+                if (task) {
+                    if (task.status === "active") {
+                        console.log(styleWarning, `\n[INFO] "${task.name}" is already active.`);
+                    } else {
+                        task.timerId = setInterval(() => {
+                            const time = new Date().toLocaleTimeString();
+                            console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds)`);
+                        }, task.delay * 1000);
+                        task.status = "active";
+                        saveTasks();
+                        console.log(styleSystem, `[SYSTEM] Task "${task.name}" has been resumed.`);
+                    }
+                } else {
+                    console.log(styleError, `[ERROR] Task "${taskToResume}" not found.`);
+                }
+                console.log("");
+                askFortask();
+            });
+            return;
+        }
+        if(!name.trim() === "") {
+
+            console.log(styleError, "[ERROR] Task name cannot be empty.");
             return askFortask();
         }
 
@@ -115,7 +162,7 @@ function askFortask() {
 
             saveTasks();
 
-            console.log(styleSucess, `[SYSTEM] Task "${taskName}" has been add and saved in the JSON file!\n`);
+            console.log(styleSuccess, `[SYSTEM] Task "${taskName}" has been added and saved in the JSON file!\n`);
 
             askFortask();
         });
@@ -123,3 +170,6 @@ function askFortask() {
 
     });
 }
+
+loadTasks();
+askFortask();
