@@ -38,12 +38,21 @@ function loadTasks() {
             activeTasks.push({ name: task.name,
                  delay: task.delay, 
                  timerId: timerId });
-                 
-
 
             });
         });
-
-
+        
+    } catch (error) {   
+        console.log("[ERROR] Failed to load JSON file:");
+    } else{
+        console.log(styleSystem,"[SYSTEM] No tasks found in the JSON file.");
     }
+}
+
+function saveTasks() {
+    const dataToSave = activeTasks.map(task => ({
+        name: task.name,
+        delay: task.delay
+    }));
+    fs.writeFileSync(FilePath, JSON.stringify(dataToSave, null, 2), 'utf8');
 }
