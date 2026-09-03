@@ -31,7 +31,15 @@ function loadTasks() {
 
                 
             const time = new Date().toLocaleDateString();
-            console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  )`);
+            console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  )`
+            , task.delay * 1000);
+
+
+            activeTasks.push({ name: task.name,
+                 delay: task.delay, 
+                 timerId: timerId });
+                 
+
 
             });
         });
