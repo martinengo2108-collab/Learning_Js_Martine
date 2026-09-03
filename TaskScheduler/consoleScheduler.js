@@ -20,31 +20,38 @@ console.log("========================================");
 
 console.log("Useful Commands : 'list' or 'exit'\n");
 
-function loadTasks() {
+function loadTasks() { 
 
     if (fs.existsSync(FilePath)) {
+        try{
+
         const fileData = fs.readFileSync(FilePath, 'utf8');
         const savedTasks = JSON.parse(fileData);
+
+        console.log(styleSystem,`[SYSTEM] `)
 
         savedTasks.forEach(task => {
             const timerId = setInterval(() => {
 
                 
             const time = new Date().toLocaleDateString();
-            console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  )`
+            console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  `);
+            }
             , task.delay * 1000);
 
 
             activeTasks.push({ name: task.name,
                  delay: task.delay, 
-                 timerId: timerId });
+                 timerId: timerId 
+                });
 
-            });
+        
         });
         
     } catch (error) {   
         console.log("[ERROR] Failed to load JSON file:");
-    } else{
+    } 
+    }else{
         console.log(styleSystem,"[SYSTEM] No tasks found in the JSON file.");
     }
 }
@@ -56,6 +63,7 @@ function saveTasks() {
     }));
     fs.writeFileSync(FilePath, JSON.stringify(dataToSave, null, 2), 'utf8');
 }
+
 
 function askFortask() {
     rl.question("Enter task name: ", (taskName) => {
@@ -71,7 +79,7 @@ function askFortask() {
                     return askFortask();
             }
 
-            if(taskName.toLowerCase() === 'list') {
+            if(taskName.toLowerCase() === 'exit') {
                 console.log("\n ---- ACTIVE TASKS ----");
                 if(activeTasks.length === 0) console.log("No tasks ");
                 activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
@@ -84,6 +92,12 @@ function askFortask() {
                 rl.close();
                 process.exit(0);
             }
+            if(taskName.trim() === '') {
+                console.log("Empty task name is not allowed. Please enter a valid task name.   ");
+                return askFortask();
+            }
+
+            rl.question
         }
         
     });
