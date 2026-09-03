@@ -97,7 +97,20 @@ function askFortask() {
                 return askFortask();
             }
 
-            rl.question
+            rl.question(`Enter delay in seconds for task "${taskName}": `, (delayInput) => {
+
+                const delay = parseInt(delayInput, 10);
+
+                if (isNaN(delay) || delay <= 0) {
+                    console.log("Invalid delay. Please enter a positive number.");
+                    return askFortask();
+                }
+
+                const timerId = setInterval(() => {
+                    const time = new Date().toLocaleTimeString();
+                    console.log(`\n` + `[${time}] [Task: ${taskName.toUpperCase()}] Execute (every ${delay} seconds)`);
+                }, delay * 1000);
+            });
         }
         
     });
