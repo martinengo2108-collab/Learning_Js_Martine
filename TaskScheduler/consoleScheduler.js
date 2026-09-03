@@ -20,39 +20,40 @@ console.log("========================================");
 
 console.log("Useful Commands : 'list' or 'exit'\n");
 
-function loadTasks() { 
+function loadTasks() {
 
     if (fs.existsSync(FilePath)) {
-        try{
+        try {
 
-        const fileData = fs.readFileSync(FilePath, 'utf8');
-        const savedTasks = JSON.parse(fileData);
+            const fileData = fs.readFileSync(FilePath, 'utf8');
+            const savedTasks = JSON.parse(fileData);
 
-        console.log(styleSystem,`[SYSTEM] `)
+            console.log(styleSystem, `[SYSTEM] `)
 
-        savedTasks.forEach(task => {
-            const timerId = setInterval(() => {
-
-                
-            const time = new Date().toLocaleDateString();
-            console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  `);
-            }
-            , task.delay * 1000);
+            savedTasks.forEach(task => {
+                const timerId = setInterval(() => {
 
 
-            activeTasks.push({ name: task.name,
-                 delay: task.delay, 
-                 timerId: timerId 
+                    const time = new Date().toLocaleDateString();
+                    console.log(`\n` + `[${time}] [Task: ${task.name.toUpperCase()}] Execute (every ${task.delay} seconds  `);
+                }
+                    , task.delay * 1000);
+
+
+                activeTasks.push({
+                    name: task.name,
+                    delay: task.delay,
+                    timerId: timerId
                 });
 
-        
-        });
-        
-    } catch (error) {   
-        console.log("[ERROR] Failed to load JSON file:");
-    } 
-    }else{
-        console.log(styleSystem,"[SYSTEM] No tasks found in the JSON file.");
+
+            });
+
+        } catch (error) {
+            console.log("[ERROR] Failed to load JSON file:");
+        }
+    } else {
+        console.log(styleSystem, "[SYSTEM] No tasks found in the JSON file.");
     }
 }
 
@@ -68,50 +69,57 @@ function saveTasks() {
 function askFortask() {
     rl.question("Enter task name: ", (taskName) => {
 
-        if(taskName.toLowerCase() === 'list') {
+        if (taskName.toLowerCase() === 'list') {
             console.log("\n ---- ACTIVE TASKS ----");
-            if(activeTasks.length === 0) console.log("No tasks are currently active.");
+            if (activeTasks.length === 0) console.log("No tasks are currently active.");
 
-                activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`)); {
-                    
-                    console.log("------------------------\n");
+            activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
 
-                    return askFortask();
-            }
+            console.log("------------------------\n");
 
-            if(taskName.toLowerCase() === 'exit') {
-                console.log("\n ---- ACTIVE TASKS ----");
-                if(activeTasks.length === 0) console.log("No tasks ");
-                activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
-                console.log("------------------------\n");
-                return askFortask();
-            }
-
-            if(taskName.toLowerCase() === 'exit') {
-                console.log(styleSystem, "[SYSTEM] Exiting the task scheduler...");
-                rl.close();
-                process.exit(0);
-            }
-            if(taskName.trim() === '') {
-                console.log("Empty task name is not allowed. Please enter a valid task name.   ");
-                return askFortask();
-            }
-
-            rl.question(`Enter delay in seconds for task "${taskName}": `, (delayInput) => {
-
-                const delay = parseInt(delayInput, 10);
-
-                if (isNaN(delay) || delay <= 0) {
-                    console.log("Invalid delay. Please enter a positive number.");
-                    return askFortask();
-                }
-
-                const timerId = setInterval(() => {
-                    const time = new Date().toLocaleTimeString();
-                    console.log(`\n` + `[${time}] [Task: ${taskName.toUpperCase()}] Execute (every ${delay} seconds)`);
-                }, delay * 1000);
-            });
+            return askFortask();
         }
-        
+
+        if (taskName.toLowerCase() === 'exit') {
+            console.log("\n ---- ACTIVE TASKS ----");
+            if (activeTasks.length === 0) console.log("No tasks ");
+            activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
+            console.log("------------------------\n");
+            return askFortask();
+        }
+
+        if (taskName.toLowerCase() === 'exit') {
+            console.log(styleSystem, "[SYSTEM] Exiting the task scheduler...");
+            rl.close();
+            process.exit(0);
+        }
+        if (taskName.trim() === '') {
+            console.log("Empty task name is not allowed. Please enter a valid task name.   ");
+            return askFortask();
+        }
+
+        rl.question(`Enter delay in seconds for task "${taskName}": `, (delayInput) => {
+
+            const delay = parseInt(delayInput, 10);
+
+            if (isNaN(delay) || delay <= 0) {
+                console.log("Invalid delay. Please enter a positive number.");
+                return askFortask();
+            }
+
+            const timerId = setInterval(() => {
+                const time = new Date().toLocaleTimeString();
+                console.log(`\n` + `[${time}] [Task: ${taskName.toUpperCase()}] Execute (every ${delay} seconds)`);
+            }, delay * 1000);
+            activeTasks.push({ name: taskName, delay: delay, timerId: timerId });
+
+            saveTasks();
+
+            console.log(styleSucess, `[SYSTEM] Task "${taskName}" has been add and saved in the JSON file!\n`);
+
+            askFortask();
+        });
+
+
     });
 }
