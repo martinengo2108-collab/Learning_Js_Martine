@@ -12,3 +12,10 @@ const rl = readline.createInterface({
 const styleSystem= "\x1b[36m%s\x1b[0m";
 const styleTask= "\x1b[33m%s\x1b[0m";
 const styleSucess= "\x1b[32m%s\x1b[0m";
+
+console.log("========================================");
+console.log("      CONSOLE-BASED TASK SCHEDULER      ");
+console.log("========================================");
+
+
+console.log("Useful Commands : 'list' or 'exit'\n");
