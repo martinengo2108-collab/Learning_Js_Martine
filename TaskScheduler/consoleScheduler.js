@@ -56,3 +56,35 @@ function saveTasks() {
     }));
     fs.writeFileSync(FilePath, JSON.stringify(dataToSave, null, 2), 'utf8');
 }
+
+function askFortask() {
+    rl.question("Enter task name: ", (taskName) => {
+
+        if(taskName.toLowerCase() === 'list') {
+            console.log("\n ---- ACTIVE TASKS ----");
+            if(activeTasks.length === 0) console.log("No tasks are currently active.");
+
+                activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`)); {
+                    
+                    console.log("------------------------\n");
+
+                    return askFortask();
+            }
+
+            if(taskName.toLowerCase() === 'list') {
+                console.log("\n ---- ACTIVE TASKS ----");
+                if(activeTasks.length === 0) console.log("No tasks ");
+                activeTasks.forEach(t => console.log(`- ${t.name} (every ${t.delay} seconds)`));
+                console.log("------------------------\n");
+                return askFortask();
+            }
+
+            if(taskName.toLowerCase() === 'exit') {
+                console.log(styleSystem, "[SYSTEM] Exiting the task scheduler...");
+                rl.close();
+                process.exit(0);
+            }
+        }
+        
+    });
+}
