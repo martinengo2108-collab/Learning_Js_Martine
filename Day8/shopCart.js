@@ -1,4 +1,4 @@
-const cart = [];
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartSidebar = document.querySelector(".cart-sidebar");
 
@@ -17,6 +17,8 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
         };
 
         cart.push(product);
+
+        saveCartToStoragee();
 
         updateCartDisplay();
 
@@ -74,7 +76,8 @@ checkoutButton.addEventListener("click" , () =>{
     }
     thankYouMessage.textContent = "Thank you for you purchase! Glad to see you soon"
 
-    cart.length =0 ;
+    cart.length =[];
+    saveCartToStorage();
 
     updateCartDisplay();
 });

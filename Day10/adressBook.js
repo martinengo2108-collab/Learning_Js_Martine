@@ -1,5 +1,6 @@
 
 let addressBook = JSON.parse(localStorage.getItem('addressBook')) || [];
+console.log(addressBook);
 
 const contactForm = document.getElementById('contactForm');
 const fullNameInput = document.getElementById('fullName');
