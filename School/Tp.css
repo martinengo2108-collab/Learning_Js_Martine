@@ -10,3 +10,6 @@
     border: 5px solid red;
     margin: 20px;
 }
+.boite:nth-child(1){
+    box-sizing:content-box;
+}
