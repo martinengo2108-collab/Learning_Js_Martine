@@ -13,3 +13,6 @@
 .boite:nth-child(1){
     box-sizing:content-box;
 }
+.boite:nth-child(2){
+    box-sizing:border-box;
+}
