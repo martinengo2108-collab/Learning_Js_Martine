@@ -43,3 +43,10 @@ button{
     color: #333333;
     background-color: #fcfbf7;
 }
+.modale{
+   /* background-color: #000000;
+    opacity: 0.5;*/
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
