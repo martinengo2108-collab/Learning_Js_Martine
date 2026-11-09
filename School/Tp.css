@@ -55,3 +55,12 @@ button{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.gallery-item img{
+    width: 100%;
+    height:auto ;
+}
+@media( max-width: 600px){
+    .gallery{
+       background-color: white;
+    }
+}
